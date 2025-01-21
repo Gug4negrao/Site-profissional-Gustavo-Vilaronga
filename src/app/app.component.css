@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 100vh;
+}
+
+.basic-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    margin: 0;
+}
+
+.basic-data h1{
+    font-family: "Bebas Neue", serif;
+    font-weight: 550;
+    font-size: clamp(42px,-6.5915492958px + 9.7183098592vw,180px);
+    letter-spacing: 4px;
+}
+
+.basic-data h3{
+    font-family: "Roboto Flex", serif;
+    font-weight: 400;
+    font-size: 16px;
+}
