@@ -1,26 +1,27 @@
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 <main>
   <div class="basic-data">
     <h3>23 de novembro de 2005</h3>
     <h1>Gustavo Negrão</h1>
-  </div>
-  <div class="social-media">
-    <ul>
-      <li>
-        <span class="icon"><i class="fa fa-whatsapp"></i></span>
+    <ul class="social-media">
+      <li style="--i:#65c436;--j:#1baf16" (click)="RedirectSocialMedias('https://wa.me/5513991255771')">
+        <span><i class="fa-brands fa-whatsapp"></i></span>
         <span class="title">Whatsapp</span>
       </li>
-      <li>
-        <span class="icon"><i class="fa fa-whatsapp"></i></span>
+      <li style="--i:#FFA9C6;--j:#F434E2" (click)="RedirectSocialMedias('https://www.instagram.com/gug4_negrao/#')">
+        <span><i class="fa-brands fa-instagram"></i></span>
         <span class="title">Instagram</span>
       </li>
-      <li>
-        <span class="icon"><i class="fa fa-whatsapp"></i></span>
+      <li style="--i:#2087c4;--j:#5ee3d4" (click)="RedirectSocialMedias('https://www.linkedin.com/in/gustavo-negr%C3%A3o')">
+        <span><i class="fa-brands fa-linkedin-in"></i></span>
         <span class="title">Linkedin</span>
       </li> 
-      <li>
-        <span class="icon"><i class="fa fa-whatsapp"></i></span>
+      <li style="--i:#281a77;--j:#3878fa" (click)="RedirectSocialMedias('https://github.com/Gug4negrao')">
+        <span><i class="fa-brands fa-github"></i></span>
         <span class="title">GitHub</span>
+      </li>
+      <li style="--i:#9e200f;--j:#e9614f" (click)="RedirectSocialMedias('mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!')">
+        <span><i class="fa-regular fa-envelope"></i></span>
+        <span class="title">Gmail</span>
       </li>
     </ul>
   </div>
