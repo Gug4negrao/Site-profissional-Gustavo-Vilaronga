@@ -27,7 +27,7 @@ main{
     font-size: clamp(42px,-6.5915492958px + 9.7183098592vw,180px);
 }
 
-#basic-data h3{
+#basic-data h3, .text h3{
     font-family: "Roboto Flex", serif;
     font-weight: 400;
     font-size: 16px;
@@ -123,21 +123,24 @@ main{
     transition-delay: 0.25s;
 }
 
-.personal-informations{
+.personal-informations, .professional-information{
     width: 100%;
     height: 100vh;
     background-color: #0a0a0a;
-    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header #logo{
-    position: fixed;
+    position:fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
     border: 1px solid #8a8a8a;
     padding: 12px 10px;
     border-radius: 15%;
+    background-color: #f8f8f8 ;
 }
   
 header #logo img{
@@ -152,6 +155,7 @@ header #logo img{
     justify-content: center;
     align-items: center;
     gap: 5%;
+    margin-top: 3%;
 }
 
 .images .card{
@@ -182,3 +186,39 @@ header #logo img{
     transition: 0.4s;
     transform: scale(0.9);
 }
+
+.professional-information{
+    background-color: #f8f8f8;
+}
+
+.text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.text h2, .text h3{ 
+    color: #f8f8f8;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.text h2{
+    font-family: "Bebas Neue", serif;
+    font-weight: 700;
+    font-size: clamp(42px,-6.5915492958px + 5vw,180px);
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+p{ text-indent: 20px }
+
+hr {
+    width: 80%;
+    height: 1px;
+    background: white;
+    margin-bottom: 20px;
+}
+
