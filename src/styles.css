@@ -1,3 +1,11 @@
+/* Variáveis */
+:root {
+  --background-light: #f8f8f8;
+  --background-dark: #0a0a0a;
+  --font-title: "Bebas Neue", serif;
+  --font-body: "Roboto Flex", serif;
+}
+
 *{
     padding: 0px;
     margin: 0px;

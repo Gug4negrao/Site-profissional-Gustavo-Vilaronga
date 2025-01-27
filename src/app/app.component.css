@@ -7,7 +7,7 @@
 
 main{
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: var(--background-light);
 }
 
 #basic-data, .pictures{
@@ -21,14 +21,14 @@ main{
 }
 
 #basic-data h1{
-    font-family: "Bebas Neue", serif;
+    font-family: var(--font-title);
     font-weight: 700;
     letter-spacing: 5px;
     font-size: clamp(42px,-6.5915492958px + 9.7183098592vw,180px);
 }
 
 #basic-data h3, .text h3{
-    font-family: "Roboto Flex", serif;
+    font-family: var(font-body);
     font-weight: 400;
     font-size: 16px;
 }
@@ -91,7 +91,7 @@ main{
 }
 
 .social-media li i{
-    color: #0a0a0a;
+    color: var(--background-dark);
     font-size: 1.75em !important;
     transition: 0.5s;
     transition-delay: 0.25s;
@@ -127,7 +127,7 @@ main{
     width: 95%;
     height: 100vh;
     margin: auto;
-    background-color: #0a0a0a;
+    background-color: var(--background-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,7 +143,7 @@ header #logo{
     border: 1px solid #464646;
     padding: 12px 10px;
     border-radius: 15%;
-    background-color: #f8f8f8 ;
+    background-color: var(--background-light);
 }
   
 header #logo img{
@@ -191,7 +191,7 @@ header #logo img{
 }
 
 .professional-information{
-    background-color: #f8f8f8;
+    background-color: var(--background-light);
 }
 
 .text{
@@ -203,13 +203,13 @@ header #logo img{
 }
 
 .text h2, .text h3{ 
-    color: #f8f8f8;
+    color: var(--background-light);
     text-align: justify;
     font-size: 18px;
 }
 
 .text h2{
-    font-family: "Bebas Neue", serif;
+    font-family: var(--font-title);
     font-weight: 700;
     font-size: clamp(42px,-6.5915492958px + 5vw,180px);
     letter-spacing: 2px;
@@ -221,7 +221,6 @@ p{ text-indent: 20px }
 hr {
     width: 80%;
     height: 1px;
-    background: white;
+    background: var(--background-light);
     margin-bottom: 20px;
 }
-
