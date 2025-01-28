@@ -149,7 +149,6 @@ main{
 #logo img{
     width: 40px;
     height: auto; 
-    cursor: pointer;
 }
 
 .images{
@@ -228,13 +227,16 @@ hr {
 header{
     width: 50%;
     padding-top: 10px;
-    margin: auto;
     display: flex;
     justify-content: space-evenly;
     font-family: var(--font-body);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%)
 }
 
 header a {
     all: unset;
     cursor: pointer;
+    text-align: center;
 }
