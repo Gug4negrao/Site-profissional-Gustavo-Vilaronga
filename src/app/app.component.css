@@ -123,7 +123,7 @@ main{
     transition-delay: 0.25s;
 }
 
-.personal-informations, .professional-information{
+#personal-informations, #professional-informations{
     width: 95%;
     height: 100vh;
     margin: auto;
@@ -133,9 +133,9 @@ main{
     align-items: center;
 }
 
-.personal-informations{ border-radius: 32% 38% 63% 20% / 37% 47% 53% 79% }
+#personal-informations{ border-radius: 32% 38% 63% 20% / 37% 47% 53% 79% }
 
-header #logo{
+#logo{
     position:fixed;
     bottom: 20px;
     right: 20px;
@@ -145,8 +145,8 @@ header #logo{
     border-radius: 15%;
     background-color: var(--background-light);
 }
-  
-header #logo img{
+
+#logo img{
     width: 40px;
     height: auto; 
     cursor: pointer;
@@ -190,7 +190,7 @@ header #logo img{
     transform: scale(0.9);
 }
 
-.professional-information{
+#professional-informations{
     background-color: var(--background-light);
 }
 
@@ -223,4 +223,18 @@ hr {
     height: 1px;
     background: var(--background-light);
     margin-bottom: 20px;
+}
+
+header{
+    width: 50%;
+    padding-top: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: var(--font-body);
+}
+
+header a {
+    all: unset;
+    cursor: pointer;
 }
