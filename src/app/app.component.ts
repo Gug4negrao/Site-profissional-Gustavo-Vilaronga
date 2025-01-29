@@ -21,17 +21,21 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.language = this.translationService.getLanguage();
-    this.translationLoad();
+    // this.translationLoad();
   }
 
-  translationLoad(): void{
-    this.constants = {
-      socialMedia: Translations.SocialMedia[this.language]
-    }
-  }
+  // translationLoad(): void{
+  //   this.constants = {
+  //     socialMedia: Translations.SocialMedia[this.language]
+  //   }
+  // }
 
-  setLanguage(language: string): void{
-    this.translationService.setLanguage(language);
-    window.location.reload();
-  }
+  // setLanguage(language: string): void{
+  //   this.translationService.setLanguage(language);
+  //   window.location.reload();
+  // }
+
+  getTranslationText(text: string): string {
+    return Translations[text][this.language];
+}
 }
