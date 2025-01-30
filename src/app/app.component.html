@@ -1,8 +1,21 @@
 <main>
   <header>
-    <a href="#basic-data">{{getTranslationText('socialMedia')}}</a>
-    <a href="#personal-informations">{{getTranslationText('aboutMe')}}</a>
-    <a href="#professional-informations">{{getTranslationText('skills')}}</a>
+    <nav>
+      <a href="#basic-data">{{getTranslationText('socialMedia')}}</a>
+      <a href="#personal-informations">{{getTranslationText('aboutMe')}}</a>
+      <a href="#professional-informations">{{getTranslationText('skills')}}</a>
+    </nav>
+    <div class="language-container"> 
+      <button (click)="setLanguage('pt-br')" [ngClass]="{'language-set': language === 'pt-br'}">
+        <img src="images/brazil.png" alt="Brazil">
+      </button>
+      <button (click)="setLanguage('en-us')" [ngClass]="{'language-set': language === 'en-us'}">
+        <img src="images/eua.png" alt="EUA">
+      </button>
+      <button (click)="setLanguage('es-es')" [ngClass]="{'language-set': language === 'es-es'}">
+        <img src="images/spain.png" alt="Spain">
+      </button>
+    </div>
   </header>
   <div>
     <div id="logo">
@@ -10,28 +23,28 @@
     </div>
   </div>
   <div id="basic-data">
-    <h3>Desenvolvedor Full-Stack</h3>
+    <h3>{{getTranslationText('developerFullStack')}}</h3>
     <h1>Gustavo Negrão</h1>
     <ul class="social-media">
-      <li style="--i:#65c436;--j:#1baf16" (click)="RedirectSocialMedias('https://wa.me/5513991255771')">
+      <li style="--i:#65c436;--j:#1baf16" (click)="redirectSocialMedias('https://wa.me/5513991255771')">
         <span><i class="fa-brands fa-whatsapp"></i></span>
         <span class="title">Whatsapp</span>
       </li>
-      <li style="--i:#FFA9C6;--j:#F434E2" (click)="RedirectSocialMedias('https://www.instagram.com/gug4_negrao/#')">
+      <li style="--i:#FFA9C6;--j:#F434E2" (click)="redirectSocialMedias('https://www.instagram.com/gug4_negrao/#')">
         <span><i class="fa-brands fa-instagram"></i></span>
         <span class="title">Instagram</span>
       </li>
       <li style="--i:#2087c4;--j:#5ee3d4"
-        (click)="RedirectSocialMedias('https://www.linkedin.com/in/gustavo-negr%C3%A3o')">
+        (click)="redirectSocialMedias('https://www.linkedin.com/in/gustavo-negr%C3%A3o')">
         <span><i class="fa-brands fa-linkedin-in"></i></span>
         <span class="title">Linkedin</span>
       </li>
-      <li style="--i:#281a77;--j:#3878fa" (click)="RedirectSocialMedias('https://github.com/Gug4negrao')">
+      <li style="--i:#281a77;--j:#3878fa" (click)="redirectSocialMedias('https://github.com/Gug4negrao')">
         <span><i class="fa-brands fa-github"></i></span>
         <span class="title">GitHub</span>
       </li>
       <li style="--i:#9e200f;--j:#e9614f"
-        (click)="RedirectSocialMedias('mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!')">
+        (click)="redirectSocialMedias('mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!')">
         <span><i class="fa-regular fa-envelope"></i></span>
         <span class="title">Gmail</span>
       </li>
@@ -50,17 +63,11 @@
       </div>
     </div>
     <div class="text">
-      <h2>Sobre mim</h2>
+      <h2>{{getTranslationText('aboutMe')}}</h2>
       <hr>
       <h3>
-        <p>Olá, meu nome é Gustavo Negrão Vilaronga, mas muitos me conhecem como "Gemêo"! Sou natural de Santos-SP, onde
-          cresci ao lado da minha família, composta pelos meus pais, minha irmã e meu irmão gêmeo. Nasci em 23 de
-          Novembro de 2005 e atualmente tenho 19 anos. Sou desenvolvedor e venho aplicando na prática os conhecimentos
-          que adquiri ao longo dos anos. Meu primeiro contato com a programação aconteceu aos 15 anos, e foi ali que
-          descobri minha paixão pela área e decidi que esse seria o caminho que eu seguiria para a vida.</p>
-        <p>Além da tecnologia, sempre fui apaixonado por esportes e música. Tenho o privilégio de expressar esses
-          interesses através de dons como o canto e a prática do tênis de mesa, esporte que treinei intensamente por 8
-          anos.</p>
+        <p>{{getTranslationText('textParagraph1')}}</p>
+        <p>{{getTranslationText('textParagraph2')}}</p>
       </h3>
     </div>
   </div>

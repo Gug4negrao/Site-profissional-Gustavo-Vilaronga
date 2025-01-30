@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Translations } from './constants/translations';
 import { TranslationService } from './services/translation.service';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,27 +17,20 @@ export class AppComponent implements OnInit {
 
   constructor(private translationService: TranslationService){}
 
-  RedirectSocialMedias(linkMedia : string){
+  redirectSocialMedias(linkMedia : string){
     window.open(linkMedia, "_blank");
   }
 
   ngOnInit(): void {
     this.language = this.translationService.getLanguage();
-    // this.translationLoad();
   }
-
-  // translationLoad(): void{
-  //   this.constants = {
-  //     socialMedia: Translations.SocialMedia[this.language]
-  //   }
-  // }
-
-  // setLanguage(language: string): void{
-  //   this.translationService.setLanguage(language);
-  //   window.location.reload();
-  // }
 
   getTranslationText(text: string): string {
     return Translations[text][this.language];
 }
+
+  setLanguage(language: string): void{
+    this.translationService.setLanguage(language);
+    this.language = this.translationService.getLanguage();
+  }
 }

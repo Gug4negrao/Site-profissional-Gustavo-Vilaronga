@@ -8,7 +8,7 @@ export class TranslationService {
   constructor() {}
 
   setLanguage(language: string): void {
-    localStorage.setItem(language, 'language');
+    localStorage.setItem('language', language);
   }
 
   getLanguage(): string {
