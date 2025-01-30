@@ -16,7 +16,7 @@ export const Translations: any = {
     },
     developerFullStack: {
         'pt-br': 'Desenvolvedor Full-Stack',
-        'en-us': 'Developer Full-Stack',
+        'en-us': 'Full-Stack Developer',
         'es-es': 'Desarrollador Full-Stack'
     },
     textParagraph1: {
