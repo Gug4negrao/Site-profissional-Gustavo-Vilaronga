@@ -1,8 +1,8 @@
 export const Translations: any = {
-    socialMedia: {
-        'pt-br': 'Redes sociais',
-        'en-us': 'Social medias',
-        'es-es': 'Redes sociales'
+    links: {
+        'pt-br': 'Links',
+        'en-us': 'Links',
+        'es-es': 'Enlaces'
     },
     aboutMe: {
         'pt-br': 'Sobre mim',
