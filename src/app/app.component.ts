@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Translations } from './constants/translations';
 import { TranslationService } from './services/translation.service';
 import { CommonModule } from '@angular/common';
