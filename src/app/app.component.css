@@ -401,6 +401,10 @@ nav a {
     color: white;
   }
 
+  .skill_action i{
+    font-size: 18px;
+  }
+
  #professional-informations h2{ 
     font-family: var(--font-title);
     font-weight: 700;
