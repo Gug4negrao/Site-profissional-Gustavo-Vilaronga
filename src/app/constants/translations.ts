@@ -28,5 +28,25 @@ export const Translations: any = {
         'pt-br': 'Além da tecnologia, sempre fui apaixonado por esportes e música. Tenho o privilégio de expressar esses interesses através de dons como o canto e a prática do tênis de mesa, esporte que treinei intensamente por 8 anos.',
         'en-us': 'In addition to technology, I have always been passionate about sports and music. I have the privilege of expressing these interests through gifts such as singing and practicing table tennis, a sport I trained intensely for 8 years.',
         'es-es': 'Además de la tecnología, siempre me han apasionado el deporte y la música. Tengo el privilegio de expresar estos intereses a través de dones como el canto y la práctica del tenis de mesa, deporte que entrené intensamente durante 8 años.'
+    },
+    myProjects: {
+        'pt-br': 'Meus projetos',
+        'en-us': 'My projects',
+        'es-es': 'Mis proyectos'
+    },
+    umaCausaDescription: {
+        'pt-br': 'Um site para doações e campanhas online',
+        'en-us': 'A website for online donations and campaigns',
+        'es-es': 'Un sitio web para donaciones y campañas en línea'
+    },
+    static: {
+        'pt-br': 'Estático',
+        'en-us': 'Static',
+        'es-es': 'Estático'
+    },
+    portfolio: {
+        'pt-br': 'Portifólio',
+        'en-us': 'Portfolio',
+        'es-es': 'Cartera'
     }
 }

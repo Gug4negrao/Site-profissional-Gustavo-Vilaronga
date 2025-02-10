@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
   getTranslationText(text: string): string {
     return Translations[text][this.language];
-}
+  }
 
   setLanguage(language: string): void{
     this.translationService.setLanguage(language);
