@@ -48,5 +48,30 @@ export const Translations: any = {
         'pt-br': 'Portifólio',
         'en-us': 'Portfolio',
         'es-es': 'Cartera'
+    },
+    send: {
+        'pt-br': 'Enviar',
+        'en-us': 'Send',
+        'es-es': 'Enviar'
+    },
+    yourName: {
+        'pt-br': 'Seu nome',
+        'en-us': 'Your name',
+        'es-es': 'Tu nombre'
+    },
+    yourEmail: {
+        'pt-br': 'Seu email',
+        'en-us': 'Your email',
+        'es-es': 'Tu email'
+    },
+    yourMessage: {
+        'pt-br': 'Sua mensagem',
+        'en-us': 'Your message',
+        'es-es': 'Su mensaje'
+    },
+    contact: {
+        'pt-br': 'Contato',
+        'en-us': 'Contact',
+        'es-es': 'Contacto'
     }
 }
