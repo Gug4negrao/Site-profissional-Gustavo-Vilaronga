@@ -73,5 +73,15 @@ export const Translations: any = {
         'pt-br': 'Contato',
         'en-us': 'Contact',
         'es-es': 'Contacto'
+    },
+    start: {
+        'pt-br': 'Início',
+        'en-us': 'Start',
+        'es-es': 'Principio'
+    },
+    allRightsReserved: {
+        'pt-br': 'Todos os direitos reservados.',
+        'en-us': 'All rights reserved.',
+        'es-es': 'Reservados todos los derechos.'
     }
 }

@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent implements OnInit {
   title: string = 'PortiflioGustavo';
   language: string = 'pt-br';
+  menuOpen = false;
   constants: any = {};
 
   constructor(private translationService: TranslationService){}
@@ -31,5 +32,9 @@ export class AppComponent implements OnInit {
   setLanguage(language: string): void{
     this.translationService.setLanguage(language);
     this.language = this.translationService.getLanguage();
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
   }
 }

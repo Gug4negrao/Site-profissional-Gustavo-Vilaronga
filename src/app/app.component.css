@@ -141,22 +141,6 @@ main{
 
 #personal-informations{ border-radius: 32% 38% 63% 20% / 37% 47% 53% 79% }
 
-/* #logo{
-    position:fixed;
-    bottom: 20px;
-    right: 15px;
-    z-index: 1000;
-    border: 1px solid #464646;
-    padding: 12px 10px;
-    border-radius: 15%;
-    background-color: var(--background-light);
-}
-
-#logo img{
-    width: 40px;
-    height: auto; 
-} */
-
 .images{
     display:flex;
     flex-direction: row;
@@ -238,7 +222,7 @@ header{
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -250,7 +234,7 @@ nav{
     letter-spacing: 2px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Move para o centro exato */
+    transform: translateX(-50%);
 }
 
 nav a {
@@ -479,15 +463,14 @@ nav a {
   align-items: center;
 }
 
-/* Estilização do Footer */
 .footer {
   background: black;
   color: white;
   padding: 40px 0;
   text-align: center;
+  font-family: var(--font-body);
 }
 
-/* Container do Footer */
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -495,14 +478,12 @@ nav a {
   gap: 20px;
 }
 
-/* Estilização da Logo */
 .footer-brand img {
   max-width: 120px;
   height: auto;
-  filter: brightness(0) invert(1); /* Mantém o logo visível no fundo escuro */
+  filter: brightness(0) invert(1);
 }
 
-/* Links do Footer */
 .footer-links {
   list-style: none;
   display: flex;
@@ -522,10 +503,9 @@ nav a {
 }
 
 .footer-links a:hover {
-  color: #3878fa; /* Azul no hover */
+  color: #0e3364;
 }
 
-/* Redes Sociais */
 .footer-social {
   display: flex;
   gap: 15px;
@@ -539,12 +519,57 @@ nav a {
 
 .footer-social a:hover {
   transform: scale(1.2);
-  color: #3878fa;
+  color: #0e3364;
 }
 
-/* Copyright */
 .footer-bottom {
   margin-top: 20px;
   font-size: 14px;
   opacity: 0.6;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    left: 20px;
+    z-index: 1100;
+}
+
+/*MEDIAS*/@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 50vh;
+        background: rgba(255, 255, 255, 0.719);
+        padding-top: 60px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+        color: rgb(12, 12, 12);
+        display: block;
+    }
+
+    nav.active {
+        transform: translateX(0);
+        display: flex;
+    }
 }

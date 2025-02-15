@@ -1,11 +1,14 @@
 <main>
   <header>
-    <nav>
+    <button class="menu-toggle" (click)="toggleMenu()"> &#9776; </button>
+    
+    <nav [ngClass]="{'active': menuOpen}">
       <a href="#basic-data">{{getTranslationText('links')}}</a>
       <a href="#professional-informations">{{getTranslationText('skills')}}</a>
       <a href="#personal-informations">{{getTranslationText('aboutMe')}}</a>
       <a href="#contact">{{getTranslationText('contact')}}</a>
     </nav>
+  
     <div class="language-container"> 
       <button (click)="setLanguage('pt-br')" [ngClass]="{'language-set': language === 'pt-br'}">
         <img src="images/brazil.png" alt="Brazil">
@@ -18,11 +21,6 @@
       </button>
     </div>
   </header>
-  <div>
-    <!-- <a id="logo" href="#basic-data">
-      <img src="images/logoGustavoNegrao.png" alt="logo">
-    </a> -->
-  </div>
   <div id="basic-data">
     <h3>{{getTranslationText('developerFullStack')}}</h3>
     <h1>Gustavo Negrão</h1>
@@ -109,20 +107,15 @@
   </div>
   <footer class="footer">
     <div class="footer-container">
-        <!-- Logo ou Nome -->
         <div class="footer-brand">
             <img src="images/logoGustavoNegrao.png" alt="Logo Gustavo Negrão">
         </div>
-
-        <!-- Links do Rodapé -->
         <ul class="footer-links">
-            <li><a href="#basic-data">Início</a></li>
-            <li><a href="#professional-informations">Habilidades</a></li>
-            <li><a href="#personal-informations">Sobre Mim</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#basic-data">{{getTranslationText('start')}}</a></li>
+            <li><a href="#professional-informations">{{getTranslationText('skills')}}</a></li>
+            <li><a href="#personal-informations">{{getTranslationText('aboutMe')}}</a></li>
+            <li><a href="#contact">{{getTranslationText('contact')}}</a></li>
         </ul>
-
-        <!-- Redes Sociais -->
         <div class="footer-social">
             <a href="https://wa.me/5513991255771" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/gug4_negrao/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -130,11 +123,8 @@
             <a href="https://github.com/Gug4negrao" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
-
-    <!-- Texto de Copyright -->
     <div class="footer-bottom">
-        <p>&copy; 2024 Gustavo Negrão. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Gustavo Negrão. {{getTranslationText('allRightsReserved')}}</p>
     </div>
 </footer>
-
 </main>
