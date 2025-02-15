@@ -37,4 +37,12 @@ export class AppComponent implements OnInit {
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
+  isMobile(): boolean {
+    return window.innerWidth <= 768;
+  }
 }
