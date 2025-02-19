@@ -538,7 +538,15 @@ nav a {
     z-index: 1100;
 }
 
-/*MEDIAS*/@media (max-width: 768px) {
+/*MEDIAS*/
+@media (max-width: 950px) {
+  #basic-data h1{
+    font-size: clamp(42px,-6.5915492958px + 12vw, 180px);
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
@@ -576,5 +584,15 @@ nav a {
         max-width: 300px;
     }
 
+    #basic-data{
+      min-height: 65vh;
+    }
+
+    #basic-data h1{
+      font-size: clamp(42px,-6.5915492958px + 20vw, 100px);
+      word-wrap: break-word;
+      line-height: 1;
+      margin-top: 5px;
+    }
     
 }
