@@ -134,7 +134,8 @@ main{
 #professional-informations{
     background-color: var(--background-light);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    background-color: var(--background-light);
 }
 
 #personal-informations{ border-radius: 32% 38% 63% 20% / 37% 47% 53% 79% }
@@ -395,6 +396,12 @@ nav a {
     font-size: clamp(42px,-6.5915492958px + 5vw,180px);
     letter-spacing: 2px;
     text-align: justify;
+    padding: 15px 20px;
+    background-color: black;
+    color: var(--background-light);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 80px;
 }
 
 .contact-form {
@@ -543,7 +550,7 @@ nav a {
 /*MEDIAS*/
 @media (max-width: 950px) {
   #basic-data h1{
-    font-size: clamp(42px,-6.5915492958px + 12vw, 180px);
+    font-size: clamp(42px,-6.5915492958px + 14vw, 180px);
     word-wrap: break-word;
   }
 }
