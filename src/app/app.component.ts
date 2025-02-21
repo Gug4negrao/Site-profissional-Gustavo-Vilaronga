@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.language = this.translationService.getLanguage();
+    this.createAbstractShapes();
   }
 
   getTranslationText(text: string): string {
@@ -45,4 +46,24 @@ export class AppComponent implements OnInit {
   isMobile(): boolean {
     return window.innerWidth <= 768;
   }
+
+  createAbstractShapes(): void {
+    const mainContainer = document.getElementById("main-container");
+
+    if (!mainContainer) return;
+
+    for (let i = 0; i < 5; i++) {
+        let shape = document.createElement("div");
+        shape.classList.add("abstract-shape");
+
+        shape.style.top = Math.random() * 90 + "vh";
+        shape.style.left = Math.random() * 90 + "vw";
+        shape.style.transform = `rotate(${Math.random() * 360}deg)`;
+        shape.style.width = Math.random() * 150 + 100 + "px"; 
+        shape.style.height = shape.style.width;
+
+        mainContainer.appendChild(shape);
+    }
+  }
 }
+

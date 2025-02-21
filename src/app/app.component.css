@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
-main{
-    width: 100%;
-    background-color: var(--background-light);
+#main-container {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle, #ffffff 10%, #f8f8f8 40%, #e6e6e6 70%, #d1d1d1 100%), 
+              linear-gradient(135deg, #ffffff 0%, #f8f8f8 35%, #e0e0e0 70%, #f8f8f8 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.abstract-shape {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.9);
+  clip-path: polygon(10% 0%, 90% 10%, 80% 90%, 20% 80%);
+  opacity: 0.8;
+  z-index: 1;
 }
 
 #basic-data, .pictures{
@@ -125,20 +140,20 @@ main{
     min-height: 100vh;
     height: auto;
     margin: auto;
-    background-color: var(--background-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #professional-informations{
-    background-color: var(--background-light);
     display: flex;
     justify-content: flex-start;
-    background-color: var(--background-light);
 }
 
-#personal-informations{ border-radius: 32% 38% 63% 20% / 37% 47% 53% 79% }
+#personal-informations {
+   background-color: var(--background-dark);
+   border-radius: 32% 38% 63% 20% / 37% 47% 53% 79%;
+}
 
 .images{
     display:flex;
@@ -278,7 +293,7 @@ nav a {
   }
 
   .language-set{
-    background-color: rgb(223, 223, 223) !important;
+    background-color: rgb(206, 206, 206) !important;
   }
 
   .skills{
@@ -603,13 +618,8 @@ nav a {
 }
 
   @media (max-width: 500px) {
-  .social-media {
-    max-width: 210px;
-    margin-top: 10px;
-  }
-
-  .social-media li {
-    flex: 1 1 calc(33.33% - 25px);
-    max-width: 60px;
-  }
+    .social-media {
+      max-width: 90%;
+      margin-top: 10px;
+    }
 }
