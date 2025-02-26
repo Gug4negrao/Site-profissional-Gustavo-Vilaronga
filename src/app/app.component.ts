@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 import { Translations } from './constants/translations';
 import { TranslationService } from './services/translation.service';
 import { CommonModule } from '@angular/common';
@@ -65,5 +65,16 @@ export class AppComponent implements OnInit {
         mainContainer.appendChild(shape);
     }
   }
+
+  @ViewChild('skillsContainer') skillsContainer!: ElementRef;
+  scrollLeft(): void {
+    if (this.skillsContainer?.nativeElement) { this.skillsContainer.nativeElement.scrollBy({ left: -300, behavior: "smooth" }) }
+  }
+
+  scrollRight(): void {
+    if (this.skillsContainer?.nativeElement) { this.skillsContainer.nativeElement.scrollBy({ left: 300, behavior: "smooth" }) }
+  }
+
 }
+
 

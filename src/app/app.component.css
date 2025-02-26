@@ -296,14 +296,32 @@ nav a {
     background-color: rgb(206, 206, 206) !important;
   }
 
-  .skills{
-    flex-direction: row;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: center;
+/* Container principal */
+.skills_container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden; /* Esconde a barra de rolagem */
+  display: flex;
+  align-items: center;
+}
+
+
+/* Container rolável */
+.skills {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 10px;
+  width: 100%;
 }
   
+  /* Remove a barra de rolagem */
+  .skills::-webkit-scrollbar {
+    display: none;
+  }
+
   .skill {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: relative;
@@ -314,6 +332,7 @@ nav a {
     align-items: center;
     border-radius: 20px;
     background: black;
+    white-space: normal;
   }
   
   .skill_img {
@@ -405,6 +424,41 @@ nav a {
     font-size: 18px;
   }
 
+ /* Botões de navegação */
+.arrow {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para centralizar melhor */
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+/* Efeito hover nas setas */
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Posição das setas */
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+/* Evita que as setas apareçam se não houver mais rolagem */
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
  #professional-informations h2{ 
     font-family: var(--font-title);
     font-weight: 700;
