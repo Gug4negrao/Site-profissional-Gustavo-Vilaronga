@@ -2,8 +2,8 @@
     <button class="menu-toggle" (click)="toggleMenu()"> &#9776; </button>
     <nav [ngClass]="{'active': menuOpen}">
       <a href="#basic-data" (click)="closeMenu()">{{getTranslationText('links')}}</a>
-      <a href="#professional-informations" (click)="closeMenu()">{{getTranslationText('skills')}}</a>
       <a href="#personal-informations" (click)="closeMenu()">{{getTranslationText('aboutMe')}}</a>
+      <a href="#professional-informations" (click)="closeMenu()">{{getTranslationText('skills')}}</a>
       <a href="#contact" (click)="closeMenu()">{{getTranslationText('contact')}}</a>
     </nav>
     <div class="language-container"> 
@@ -47,6 +47,29 @@
       </li>
     </ul>
   </div>
+  <div id="personal-informations">
+    <div id="background-art">
+      <div class="images">
+        <div class="card">
+          <img src="images/picture1.png" id="picture1" />
+        </div>
+        <div class="card">
+          <img src="images/picture2.png" id="picture2" />
+        </div>
+        <div class="card">
+          <img src="images/picture3.png" id="picture3" />
+        </div>
+      </div>
+      <div class="text">
+        <h2>{{getTranslationText('aboutMe')}}</h2>
+        <hr>
+        <h3>
+          <p>{{getTranslationText('textParagraph1')}}</p>
+          <p>{{getTranslationText('textParagraph2')}}</p>
+        </h3>
+      </div>
+    </div>
+  </div>
   <div id="professional-informations">
     <h2>{{getTranslationText('myProjects')}}</h2>
     <div class="skills_container">
@@ -84,27 +107,6 @@
         </div>
       </div>
       <button class="arrow arrow-right" (click)="scrollRight()">&#9654;</button>
-    </div>
-  </div>
-  <div id="personal-informations">
-    <div class="images">
-      <div class="card">
-        <img src="images/picture1.png" id="picture1" />
-      </div>
-      <div class="card">
-        <img src="images/picture2.png" id="picture2" />
-      </div>
-      <div class="card">
-        <img src="images/picture3.png" id="picture3" />
-      </div>
-    </div>
-    <div class="text">
-      <h2>{{getTranslationText('aboutMe')}}</h2>
-      <hr>
-      <h3>
-        <p>{{getTranslationText('textParagraph1')}}</p>
-        <p>{{getTranslationText('textParagraph2')}}</p>
-      </h3>
     </div>
   </div>
   <div id="contact">
