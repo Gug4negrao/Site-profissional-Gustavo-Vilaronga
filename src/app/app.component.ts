@@ -17,15 +17,15 @@ export class AppComponent implements OnInit {
 
   constructor(private translationService: TranslationService){}
 
+  ngOnInit(): void {
+    this.language = this.translationService.getLanguage();
+    // this.checkButtonsVisibility();
+  }
+
   redirectSocialMedias(linkMedia : string){
     window.open(linkMedia, "_blank");
   }
-
-  ngOnInit(): void {
-    this.language = this.translationService.getLanguage();
-    this.createAbstractShapes();
-  }
-
+ 
   getTranslationText(text: string): string {
     return Translations[text][this.language];
   }
@@ -47,24 +47,28 @@ export class AppComponent implements OnInit {
     return window.innerWidth <= 768;
   }
 
-  createAbstractShapes(): void {
-    const mainContainer = document.getElementById("main-container");
-
-    if (!mainContainer) return;
-
-    for (let i = 0; i < 5; i++) {
-        let shape = document.createElement("div");
-        shape.classList.add("abstract-shape");
-
-        shape.style.top = Math.random() * 90 + "vh";
-        shape.style.left = Math.random() * 90 + "vw";
-        shape.style.transform = `rotate(${Math.random() * 360}deg)`;
-        shape.style.width = Math.random() * 150 + 100 + "px"; 
-        shape.style.height = shape.style.width;
-
-        mainContainer.appendChild(shape);
-    }
-  }
+//    checkButtonsVisibility(): void {
+//     const container = document.querySelector(".skills"); // Container que envolve os cards
+//     const cards = document.querySelectorAll(".skill"); // Todos os cards
+//     const prevButton = document.querySelector(".arrow-left"); // Botão esquerdo
+//     const nextButton = document.querySelector(".arrow-right"); // Botão direito
+//     const screenWidth = window.innerWidth; // Largura da tela
+//     const cardWidth = 300; // Largura de cada card
+//     const gap = 20; // Espaçamento entre os cards
+//     const totalCards = cards.length; // Quantidade total de cards
+    
+//     // Largura total necessária para exibir todos os cards corretamente
+//     const requiredWidth = totalCards * (cardWidth + gap) - gap;
+    
+//     // Verifica se os cards cabem na tela
+//     if (requiredWidth <= screenWidth) {
+//           prevButton.style.display = "none";
+//         nextButton.style.display = "none";
+//     } else {
+//         prevButton.style.display = "block";
+//         nextButton.style.display = "block";
+//     }
+// }
 
   @ViewChild('skillsContainer') skillsContainer!: ElementRef;
   scrollLeft(): void {
