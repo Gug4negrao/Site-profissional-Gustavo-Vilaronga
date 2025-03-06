@@ -39,7 +39,7 @@
 }
 
 #basic-data h3, .text h3{
-    font-family: var(font-body);
+    font-family: var(--font-body);
     font-weight: 400;
     font-size: 16px;
 }
@@ -430,11 +430,10 @@ nav a {
     font-size: 18px;
   }
 
- /* Botões de navegação */
 .arrow {
   position: absolute;
-  top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-50%); /* Ajuste fino para centralizar melhor */
+  top: 50%;
+  transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
@@ -446,12 +445,10 @@ nav a {
   transition: background 0.3s ease;
 }
 
-/* Efeito hover nas setas */
 .arrow:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* Posição das setas */
 .arrow-left {
   left: 10px;
 }
@@ -460,7 +457,6 @@ nav a {
   right: 10px;
 }
 
-/* Evita que as setas apareçam se não houver mais rolagem */
 .arrow:disabled {
   opacity: 0.3;
   cursor: default;
