@@ -431,6 +431,7 @@ nav a {
   }
 
 .arrow {
+  display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -692,6 +693,10 @@ nav a {
 
     .card:has(#picture2) {
       display: none;
+    }
+
+    .arrow{
+      display: block;
     }
 }
 
