@@ -532,10 +532,6 @@ nav a {
   transform: scale(1.05);
 }
 
-.contact-form h2{
-  /* color: var(--background-light); */
-}
-
 #contact{
   min-height: 100vh;
   height: auto;
