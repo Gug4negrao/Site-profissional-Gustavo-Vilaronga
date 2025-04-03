@@ -241,7 +241,7 @@ header{
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 2);
     z-index: 1000;
     color: rgb(255 255 255);
 }
@@ -337,10 +337,10 @@ nav a {
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    background: black;
+    background: #030712;
     white-space: normal;
-    flex-wrap: nowrap; /* Impede que os cards quebrem para uma nova linha */
-    flex-shrink: 0; /* Impede que os cards diminuam de tamanho */
+    flex-wrap: nowrap;
+    flex-shrink: 0;
 
   }
   
@@ -409,14 +409,14 @@ nav a {
     font-weight: 700;
     font-size: 11px;
     color: white;
-    background: black;
+    background: #030712;
     text-transform: uppercase;
     transition: all 0.3s;
   }
   
   .skill_action_solid {
     background: white;
-    /* color: black; */
+    color: #030712; 
   }
   
   .skill_action:hover {
@@ -546,8 +546,8 @@ nav a {
 }
 
 .footer {
-  background: black;
-  /* color: white; */
+  background: #030712;
+  color: rgb(255 255 255);
   padding: 40px 0;
   text-align: center;
   font-family: var(--font-body);
@@ -579,13 +579,13 @@ nav a {
 
 .footer-links a {
   text-decoration: none;
-  /* color: white; */
   font-size: 16px;
   transition: color 0.3s ease-in-out;
+  color: inherit;
 }
 
 .footer-links a:hover {
-  /* color: #0e3364; */
+  color: #6ca2ee;
 }
 
 .footer-social {
@@ -594,14 +594,14 @@ nav a {
 }
 
 .footer-social a {
-  /* color: white; */
+  color: inherit;
   font-size: 20px;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .footer-social a:hover {
   transform: scale(1.2);
-  /* color: #0e3364; */
+  color: #6ca2ee;
 }
 
 .footer-bottom {
@@ -616,10 +616,10 @@ nav a {
     border: none;
     font-size: 28px;
     cursor: pointer;
-    /* color: black; */
     position: absolute;
     left: 20px;
     z-index: 1100;
+    color: inherit;
 }
 
 /*MEDIAS*/
@@ -655,7 +655,7 @@ nav a {
         width: 50%;
         min-height: 300px;
         height: auto;
-        background: rgb(247 247 247);
+        background: rgba(10, 25, 47, 1);
         padding-top: 60px;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
         transform: translateX(-100%);
