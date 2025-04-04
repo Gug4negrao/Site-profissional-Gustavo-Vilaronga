@@ -25,14 +25,14 @@ export const Translations: any = {
         'es-es': 'Soy Gustavo Negrão Vilaronga, un desarrollador apasionado por la tecnología desde los 15 años. Nacido en Santos-SP, comencé temprano mi andadura en programación y he ido aplicando en la práctica los conocimientos adquiridos a lo largo de los años.'
     },
     textParagraph2: {
-        'pt-br': 'Além da tecnologia, sou apaixonado por esportes e música. Durante 8 anos, treinei tênis de mesa intensamente, e também expresso minha criatividade através do canto. Atualmente, sigo evoluindo como desenvolvedor, buscando sempre inovação e excelência nos projetos que realizo.',
-        'en-us': 'In addition to technology, I am passionate about sports and music. For 8 years, I trained table tennis intensely, and I also express my creativity through singing. Currently, I continue to evolve as a developer, always seeking innovation and excellence in the projects I carry out.',
+        'pt-br': 'Além da tecnologia, sou apaixonado por esportes e música. Durante 8 anos treinei tênis de mesa intensamente, e também expresso minha criatividade através do canto. Atualmente, sigo evoluindo como desenvolvedor, buscando sempre inovação e excelência nos projetos que realizo.',
+        'en-us': 'In addition to technology, I am passionate about sports and music. For 8 years I trained table tennis intensely, and I also express my creativity through singing. Currently, I continue to evolve as a developer, always seeking innovation and excellence in the projects I carry out.',
         'es-es': 'Además de la tecnología, me apasionan los deportes y la música. Durante 8 años entrené intensamente tenis de mesa y también expreso mi creatividad a través del canto. Actualmente sigo evolucionando como desarrollador, buscando siempre la innovación y la excelencia en los proyectos que realizo.'
     },
-    myProjects: {
-        'pt-br': 'Meus projetos',
-        'en-us': 'My projects',
-        'es-es': 'Mis proyectos'
+    projects: {
+        'pt-br': 'Projetos',
+        'en-us': 'Projects',
+        'es-es': 'Proyectos'
     },
     umaCausaDescription: {
         'pt-br': 'Um site para doações e campanhas online',
