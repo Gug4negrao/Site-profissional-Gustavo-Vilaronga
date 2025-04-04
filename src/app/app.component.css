@@ -21,7 +21,7 @@
     color: transparent;
 }
 
-header, #background-art, .project, .contact-form{
+header, #background-art, .project, .contact-form, .skill{
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.05);
   border: solid 1px rgba(255, 255, 255, 0.1);
@@ -151,18 +151,25 @@ header, #background-art, .project, .contact-form{
     transition-delay: 0.25s;
 }
 
-#personal-informations, #projects-informations, #skills-informations{
+#personal-informations, #projects-informations, #skills-informations, #contact{
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     height: auto;
     margin: auto;
+    padding-top: 20vh;
 }
+
+#personal-informations{padding-top: 0px;}
 
 #projects-informations, #skills-informations{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+.skill{
+  width: 40%;
 }
 
 #background-art{
@@ -438,12 +445,11 @@ nav a {
 
 
 #contact{
-  min-height: 100vh;
-  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20vh;
 }
 
 .footer {
