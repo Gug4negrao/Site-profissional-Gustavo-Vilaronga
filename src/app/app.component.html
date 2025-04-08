@@ -66,8 +66,12 @@
   </div>
   <div id="skills-informations">
     <h2>{{getTranslationText('skills')}}</h2>
-    <div class="skills_container primary-width"></div>
-    <div class="skill"></div>
+    <div class="skills_container primary-width">
+      <a class="skill" *ngFor="let skill of skills" [href]="skill.docLink" target="_blank">
+      <span>{{ skill.nome }}</span>
+      <img [src]="skill.icon" [alt]="skill.nome + ' icon'" class="skill-icon" />
+    </a>
+    </div>
   </div>
   <div id="projects-informations">
     <h2>{{getTranslationText('projects')}}</h2>

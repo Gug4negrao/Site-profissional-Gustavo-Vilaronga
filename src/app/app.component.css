@@ -10,6 +10,7 @@
 .primary-width{
   width: 70%;
   min-width: 920px;
+  max-width: 1250px;
   margin: auto;
   border-radius: 20px;
 }
@@ -168,8 +169,30 @@ header, #background-art, .project, .contact-form, .skill{
     justify-content: flex-start;
 }
 
+.skills_container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
 .skill{
-  width: 40%;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;      
+  font-size: 18px;
+  gap: 10px;
+}
+
+.skill-icon{
+  width: 40px;
 }
 
 #background-art{
@@ -546,6 +569,10 @@ nav a {
   .card:has(#picture3) {
     display: none;
   }
+
+  .skills_container{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* telas pequenas */
@@ -606,6 +633,10 @@ nav a {
 
     .arrow{
       display: block;
+    }
+
+    .skills_container{
+      grid-template-columns: repeat(2, 1fr);
     }
 }
 
