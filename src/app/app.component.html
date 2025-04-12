@@ -68,28 +68,20 @@
     <h2>{{getTranslationText('skills')}}</h2>
     <div class="skills_container primary-width">
       <a class="skill" *ngFor="let skill of skills" [href]="skill.docLink" target="_blank">
-      <span>{{ skill.nome }}</span>
-      <img [src]="skill.icon" [alt]="skill.nome + ' icon'" class="skill-icon" />
+      <span>{{ skill.name }}</span>
+      <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" />
     </a>
     </div>
   </div>
   <div id="projects-informations">
     <h2>{{getTranslationText('projects')}}</h2>
     <div class="projects_container">
-      <div class="project primary-width">
-        <div class="project_title">UmaCausa</div>
-        <div class="project_subtitle">{{getTranslationText('umaCausaDescription')}}</div>
-        <div class="project_actions">
-            <button class="project_action" (click)="redirectSocialMedias('https://github.com/Gug4negrao/umaCausa')"><i class="fa-brands fa-github"></i></button>
-            <button class="project_action project_action_solid" (click)="redirectSocialMedias('https://uma-causa-estatico.vercel.app')">{{getTranslationText('static')}}</button>
-        </div>
-      </div>
-      <div class="project primary-width">
-        <div class="project_title">UmaCausa</div>
-        <div class="project_subtitle">{{getTranslationText('umaCausaDescription')}}</div>
-        <div class="project_actions">
-            <button class="project_action" (click)="redirectSocialMedias('https://github.com/Gug4negrao/umaCausa')"><i class="fa-brands fa-github"></i></button>
-            <button class="project_action project_action_solid" (click)="redirectSocialMedias('https://uma-causa-estatico.vercel.app')">{{getTranslationText('static')}}</button>
+      <div class="project primary-width" *ngFor="let project of projects">
+        <div class="project_title">{{project.name}}</div>
+        <div class="project_subtitle">{{project.description}}</div>
+        <div class="project_actions" *ngIf="project.gitHubLink || project.staticLink">
+            <button class="project_action" *ngIf="project.gitHubLink" (click)="redirectSocialMedias(project.gitHubLink)"><i class="fa-brands fa-github"></i></button>
+            <button class="project_action project_action_solid" *ngIf="project.staticLink" (click)="redirectSocialMedias(project.staticLink)">{{getTranslationText('static')}}</button>
         </div>
       </div>
     </div>
@@ -108,7 +100,7 @@
   <footer class="footer">
     <div class="footer-container">
         <div class="footer-brand">
-            <img src="images/logoGustavoNegrao.png" alt="Logo Gustavo Negrão">
+            <span class="logo">GV</span>
         </div>
         <ul class="footer-links">
             <li><a href="#basic-data">{{getTranslationText('aboutMe')}}</a></li>

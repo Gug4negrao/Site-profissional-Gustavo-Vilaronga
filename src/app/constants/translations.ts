@@ -49,6 +49,11 @@ export const Translations: any = {
         'en-us': 'Portfolio',
         'es-es': 'Cartera'
     },
+    portfolioDescription: {
+        'pt-br': 'Portfólio digital interativo, onde você explora minhas habilidades e projetos pessoais.',
+        'en-us': 'Interactive digital portfolio, where you explore my skills and personal projects.',
+        'es-es': 'Portafolio digital interactivo, donde explorarás mis habilidades y proyectos personales.'
+    },
     send: {
         'pt-br': 'Enviar',
         'en-us': 'Send',

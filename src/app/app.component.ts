@@ -4,9 +4,16 @@ import { TranslationService } from './services/translation.service';
 import { CommonModule } from '@angular/common';
 
 interface Skill {
-  nome: string;
+  name: string;
   icon: string;
   docLink: string;
+}
+
+interface Project {
+  name: string;
+  description: string;
+  staticLink: string | null;
+  gitHubLink: string | null;
 }
 
 @Component({
@@ -22,12 +29,15 @@ export class AppComponent implements OnInit {
   menuOpen = false;
   constants: any = {};
   skills: Skill[] = [];
+  projects: Project[] = [];
+
 
   constructor(private translationService: TranslationService){}
 
   ngOnInit(): void {
     this.language = this.translationService.getLanguage();
     this.skills = this.getListSkills();
+    this.projects = this.getListProjects();
   }
 
   redirectSocialMedias(linkMedia : string){
@@ -58,39 +68,56 @@ export class AppComponent implements OnInit {
   getListSkills(): Skill[] {
     return [
       {
-        nome: 'JavaScript',
+        name: 'JavaScript',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
         docLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
       },
       {
-        nome: 'AngularJs',
+        name: 'AngularJs',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
         docLink: 'https://docs.angularjs.org/api'
       },
       {
-        nome: 'TypeScript',
+        name: 'TypeScript',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
         docLink: 'https://www.typescriptlang.org/docs/'
       },
       {
-        nome: 'Angular',
+        name: 'Angular',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
         docLink: 'https://angular.io/docs'
       },
       {
-        nome: 'HTML/CSS',
+        name: 'HTML/CSS',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
         docLink: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML'
       },
       {
-        nome: 'C#',
+        name: 'C#',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
         docLink: 'https://learn.microsoft.com/en-us/dotnet/csharp/'
       },
       {
-        nome: 'Bootstrap',
+        name: 'Bootstrap',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
         docLink: 'https://getbootstrap.com/docs/'
+      }
+    ];
+  }
+
+  getListProjects(): Project[] {
+    return [
+      {
+        name: 'UmaCausa',
+        description: this.getTranslationText('umaCausaDescription'),
+        staticLink: 'https://uma-causa-estatico.vercel.app',
+        gitHubLink: 'https://github.com/Gug4negrao/umaCausa',
+      },
+      {
+        name: this.getTranslationText('portfolio'),
+        description: this.getTranslationText('portfolioDescription'),
+        staticLink: null,
+        gitHubLink: 'https://github.com/Gug4negrao/portifolioGustavo'
       }
     ];
   }
