@@ -98,9 +98,7 @@ header, #background-art, .project, .contact-form, .skill{
    transition: 0.5s;
 }
 
-.social-media li:hover::before{
-    opacity: 1;
-}
+.social-media li:hover::before{ opacity: 1 }
 
 .social-media li::after{
     content: '';
