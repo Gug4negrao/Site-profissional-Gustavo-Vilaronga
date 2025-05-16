@@ -87,14 +87,27 @@
     </div>
   </div>
   <div id="contact">
-    <form class="contact-form" action="https://formsubmit.co/guieguganegrao@gmail.com" method="POST">
-      <h2>{{getTranslationText('contact')}}</h2>
-      <input type="text" name="Nome" placeholder="🧑‍💻 {{getTranslationText('yourName')}}" required>
-      <input type="email" name="Email" placeholder="✉️ {{getTranslationText('yourEmail')}}" required>
-      <input type="text" name="Mensagem" placeholder="📝 {{getTranslationText('yourMessage')}}" required>
+   <div class="form-container">
+     <h2>{{getTranslationText('contact')}}</h2>
+     <form action="https://formsubmit.co/guieguganegrao@gmail.com" method="POST">
+      <div class="input-group">
+        <i class="fa-regular fa-user"></i>
+        <input type="text" name="Nome" placeholder="{{getTranslationText('yourName')}}" required/>
+      </div>
+      <div class="input-group">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" name="Email" placeholder="{{getTranslationText('yourEmail')}}" required/>
+      </div>
+      <div class="input-group">
+        <i class="fa-regular fa-message" style="top: 26px"></i>
+        <textarea name="Mensagem" placeholder="Sua mensagem"></textarea>
+      </div>
       <input type="hidden" name="_template" value="table">
-      <button type="submit">{{getTranslationText('send')}}</button>
-  </form>
+      <button type="submit">
+        {{getTranslationText('send')}} <i class="fas fa-paper-plane"></i>
+      </button>
+     </form>
+   </div>
   </div>
 </main>
   <footer class="footer">
@@ -112,6 +125,7 @@
             <a href="https://wa.me/5513991255771" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.linkedin.com/in/gustavo-negr%C3%A3o" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/Gug4negrao" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!"><i class="fa-regular fa-envelope"></i></a>
         </div>
     </div>
     <div class="footer-bottom">&copy; 2025 Gustavo Negrão. {{getTranslationText('allRightsReserved')}}</div>
