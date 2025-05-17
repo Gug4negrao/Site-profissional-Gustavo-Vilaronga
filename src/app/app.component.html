@@ -81,7 +81,10 @@
         <div class="project_subtitle">{{project.description}}</div>
         <div class="project_actions" *ngIf="project.gitHubLink || project.staticLink">
             <button class="project_action" *ngIf="project.gitHubLink" (click)="redirectSocialMedias(project.gitHubLink)"><i class="fa-brands fa-github"></i></button>
-            <button class="project_action project_action_solid" *ngIf="project.staticLink" (click)="redirectSocialMedias(project.staticLink)">{{getTranslationText('static')}}</button>
+            <button class="project_action project_action_solid" *ngIf="project.staticLink" (click)="redirectSocialMedias(project.staticLink)">
+              {{getTranslationText('visit')}}
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
         </div>
       </div>
     </div>
@@ -100,7 +103,7 @@
       </div>
       <div class="input-group">
         <i class="fa-regular fa-message" style="top: 26px"></i>
-        <textarea name="Mensagem" placeholder="Sua mensagem"></textarea>
+        <textarea name="Mensagem" placeholder="{{getTranslationText('yourMessage')}}"></textarea>
       </div>
       <input type="hidden" name="_template" value="table">
       <button type="submit">

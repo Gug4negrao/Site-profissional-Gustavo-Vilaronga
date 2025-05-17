@@ -357,10 +357,10 @@ nav a {
 }
 
 .project_title {
-  margin-top: 60px;
-  font-weight: 500;
-  font-size: clamp(35px, -6.5915492958px + 2vw, 180px);
-  font-family: var(--font-title);
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 24px;
+  margin-bottom: 6px !important;
 }
 
 .project_subtitle {
@@ -380,33 +380,36 @@ nav a {
   margin-top: 15px;
   width: 76px;
   height: 31px;
-  border: 2px solid white;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 11px;
-  color: white;
-  background: transparent;
   text-transform: uppercase;
+  font-weight: bold;
   transition: all 0.3s;
+  background-color: #6285b3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 11px;
 }
 
 .project_action_solid {
-  background: white;
-  color: #030712; 
-}
-
-.project_action:hover {
-  background: white;
-  color: #030712
-}
-
-.project_action_solid:hover {
   background: transparent;
-  color: white
+  border: solid 2px #6285b3;
+  width: 85px;
+  align-items: center;
 }
 
 .project_action i{
   font-size: 18px;
+}
+
+.project_action_solid i{
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+.project_action:hover, .project_action_solid:hover {
+  background-color: #335b91;
+  border:none;
 }
 
  #projects-informations h2, #skills-informations h2, .form-container h2{ 
@@ -416,6 +419,10 @@ nav a {
     letter-spacing: 2px;
     text-align: justify;
 }
+
+.form-container h2{
+    font-size: clamp(38px,-6.5915492958px + 4vw,180px);
+} 
 
 #contact{
   display: flex;
@@ -549,7 +556,7 @@ nav a {
   padding: 16px 12px 12px 40px; 
 }
 
-.form-container button {
+.form-container button  {
   width: 100%;
   padding: 12px;
   background-color: #6285b3;

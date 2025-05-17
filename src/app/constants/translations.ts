@@ -35,14 +35,14 @@ export const Translations: any = {
         'es-es': 'Proyectos'
     },
     umaCausaDescription: {
-        'pt-br': 'Um site para doações e campanhas online',
-        'en-us': 'A website for online donations and campaigns',
-        'es-es': 'Un sitio web para donaciones y campañas en línea'
+        'pt-br': 'Permite que usuários descubram ONGs, realizem doações e colaborem com metas de instituições sociais em andamento.',
+        'en-us': 'Allows users to discover NGOs, make donations, and contribute to the goals of active social institutions.',
+        'es-es': 'Permite a los usuarios descubrir ONGs, hacer donaciones y colaborar con los objetivos de instituciones sociales activas.'
     },
-    static: {
-        'pt-br': 'Estático',
-        'en-us': 'Static',
-        'es-es': 'Estático'
+    visit: {
+        'pt-br': 'Visite',
+        'en-us': 'Visit',
+        'es-es': 'Visite'
     },
     portfolio: {
         'pt-br': 'Portifólio',
@@ -50,9 +50,9 @@ export const Translations: any = {
         'es-es': 'Cartera'
     },
     portfolioDescription: {
-        'pt-br': 'Portfólio digital interativo, onde você explora minhas habilidades e projetos pessoais.',
-        'en-us': 'Interactive digital portfolio, where you explore my skills and personal projects.',
-        'es-es': 'Portafolio digital interactivo, donde explorarás mis habilidades y proyectos personales.'
+        'pt-br': 'Este site reúne minhas informações, habilidades e formas de contato. Aqui você encontra um pouco sobre mim, meus projetos e como podemos nos conectar.',
+        'en-us': 'This website brings together my information, skills, and contact details. Here, you can learn more about me, explore my work, and get in touch.',
+        'es-es': 'Este sitio reúne mi información, habilidades y formas de contacto. Aquí puedes conocer más sobre mí, explorar mis proyectos y ponerte en contacto.'
     },
     send: {
         'pt-br': 'Enviar',
