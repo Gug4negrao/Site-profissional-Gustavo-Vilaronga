@@ -24,7 +24,7 @@ interface Project {
 })
 
 export class AppComponent implements OnInit {
-  title: string = 'PortiflioGustavo';
+  showSplash = true;
   language: string = 'pt-br';
   menuOpen = false;
   constants: any = {};
@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
     this.language = this.translationService.getLanguage();
     this.skills = this.getListSkills();
     this.projects = this.getListProjects();
+
+     setTimeout(() => {
+      this.showSplash = false;
+    }, 3000);
   }
 
   redirectSocialMedias(linkMedia : string){
@@ -66,56 +70,66 @@ export class AppComponent implements OnInit {
   }
 
   getListSkills(): Skill[] {
-    return [
-      {
-        name: 'JavaScript',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-        docLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
-      },
-      {
-        name: 'AngularJs',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
-        docLink: 'https://docs.angularjs.org/api'
-      },
-      {
-        name: 'TypeScript',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-        docLink: 'https://www.typescriptlang.org/docs/'
-      },
-      {
-        name: 'Angular',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
-        docLink: 'https://angular.io/docs'
-      },
-      {
-        name: 'HTML/CSS',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-        docLink: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML'
-      },
-      {
-        name: 'C#',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-        docLink: 'https://learn.microsoft.com/en-us/dotnet/csharp/'
-      },
-      {
-        name: 'Bootstrap',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-        docLink: 'https://getbootstrap.com/docs/'
-      }
-    ];
-  }
+  return [
+    {
+      name: 'JavaScript',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+      docLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
+    },
+    {
+      name: 'AngularJs',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
+      docLink: 'https://docs.angularjs.org/api'
+    },
+    {
+      name: 'TypeScript',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+      docLink: 'https://www.typescriptlang.org/docs/'
+    },
+    {
+      name: 'Angular',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
+      docLink: 'https://angular.io/docs'
+    },
+    {
+      name: 'HTML/CSS',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+      docLink: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML'
+    },
+    {
+      name: 'Bootstrap',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+      docLink: 'https://getbootstrap.com/docs/'
+    },
+    {
+      name: 'C#',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
+      docLink: 'https://learn.microsoft.com/en-us/dotnet/csharp/'
+    },
+    {
+      name: 'ASP.NET',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg',
+      docLink: 'https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-7.0'
+    },
+    {
+      name: 'SQL',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+      docLink: 'https://dev.mysql.com/doc/'
+    }
+  ];
+}
 
   getListProjects(): Project[] {
     return [
       {
         name: 'UmaCausa',
-        description: this.getTranslationText('umaCausaDescription'),
+        description: 'umaCausaDescription',
         staticLink: 'https://uma-causa-estatico.vercel.app',
         gitHubLink: 'https://github.com/Gug4negrao/umaCausa',
       },
       {
         name: this.getTranslationText('portfolio'),
-        description: this.getTranslationText('portfolioDescription'),
+        description: 'portfolioDescription',
         staticLink: null,
         gitHubLink: 'https://github.com/Gug4negrao/portifolioGustavo'
       }

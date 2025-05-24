@@ -17,8 +17,10 @@
 
 html, body {
   scroll-behavior: smooth;
+  background-image: linear-gradient(to bottom right, #030712, #19243b, #385b8d);
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+

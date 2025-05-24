@@ -1,4 +1,7 @@
-  <header>
+  <div class="splash-screen" [hidden]="!showSplash">
+    <img src="logo.ico.png" alt="Logo" class="logo-animation" />
+  </div>
+  <header [hidden]="showSplash">
     <button class="menu-toggle" (click)="toggleMenu()"> &#9776; </button>
     <nav [ngClass]="{'active': menuOpen}">
       <a href="#basic-data" (click)="closeMenu()">{{getTranslationText('aboutMe')}}</a>
@@ -18,15 +21,11 @@
       </button>
     </div>
   </header>
-<main id="main-container" (click)="isMobile() && menuOpen ? closeMenu() : null">
+<main id="main-container" (click)="isMobile() && menuOpen ? closeMenu() : null" [hidden]="showSplash">
   <div id="basic-data">
     <h3>{{getTranslationText('developerFullStack')}}</h3>
     <h1>Gustavo Vilaronga</h1>
     <ul class="social-media"> 
-      <li style="--i:#65c436;--j:#1baf16" (click)="redirectSocialMedias('https://wa.me/5513991255771')">
-        <span><i class="fa-brands fa-whatsapp"></i></span>
-        <span class="title">Whatsapp</span>
-      </li>
       <li style="--i:#2087c4;--j:#5ee3d4"
         (click)="redirectSocialMedias('https://www.linkedin.com/in/gustavo-negr%C3%A3o')">
         <span><i class="fa-brands fa-linkedin-in"></i></span>
@@ -40,6 +39,11 @@
         (click)="redirectSocialMedias('mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!')">
         <span><i class="fa-regular fa-envelope"></i></span>
         <span class="title">Gmail</span>
+      </li>
+      <li style="--i:#a94ce7;--j:#490404"
+        (click)="redirectSocialMedias('https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDU3OTIzNjQyMjc2MDY2?story_media_id=3620401359884044203_8015582216&igsh=OHc5aTV0c3F0anR0')">
+        <span><i class="fa-brands fa-instagram"></i></span>
+        <span class="title">Instagram</span>
       </li>
     </ul>
   </div>
@@ -78,7 +82,7 @@
     <div class="projects_container">
       <div class="project primary-width" *ngFor="let project of projects">
         <div class="project_title">{{project.name}}</div>
-        <div class="project_subtitle">{{project.description}}</div>
+        <div class="project_subtitle">{{getTranslationText(project.description)}}</div>
         <div class="project_actions" *ngIf="project.gitHubLink || project.staticLink">
             <button class="project_action" *ngIf="project.gitHubLink" (click)="redirectSocialMedias(project.gitHubLink)"><i class="fa-brands fa-github"></i></button>
             <button class="project_action project_action_solid" *ngIf="project.staticLink" (click)="redirectSocialMedias(project.staticLink)">
@@ -113,7 +117,7 @@
    </div>
   </div>
 </main>
-  <footer class="footer">
+  <footer class="footer" [hidden]="showSplash">
     <div class="footer-container">
         <div class="footer-brand">
             <span class="logo">GV</span>
@@ -125,10 +129,10 @@
             <li><a href="#contact">{{getTranslationText('contact')}}</a></li>
         </ul>
         <div class="footer-social">
-            <a href="https://wa.me/5513991255771" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.linkedin.com/in/gustavo-negr%C3%A3o" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/Gug4negrao" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDU3OTIzNjQyMjc2MDY2?story_media_id=3620401359884044203_8015582216&igsh=OHc5aTV0c3F0anR0" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </div>
     <div class="footer-bottom">&copy; 2025 Gustavo Negrão. {{getTranslationText('allRightsReserved')}}</div>
