@@ -107,6 +107,7 @@ header, #background-art, .project, .skill, .form-container{
    background: linear-gradient(45deg, var(--i), var(--j));
    opacity: 0;
    transition: 0.5s;
+   font-family: var(--font-body);
 }
 
 .social-media li:hover::before{ opacity: 1 }
@@ -129,7 +130,6 @@ header, #background-art, .project, .skill, .form-container{
 }
 
 .social-media li i{
-    /* color: var(--background-dark); */
     font-size: 1.75em !important;
     transition: 0.5s;
     transition-delay: 0.25s;

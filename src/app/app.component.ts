@@ -112,9 +112,14 @@ export class AppComponent implements OnInit {
       docLink: 'https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-7.0'
     },
     {
-      name: 'SQL',
+      name: 'MySQL',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
       docLink: 'https://dev.mysql.com/doc/'
+    },
+    {
+      name: 'SQL Server',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg',
+      docLink: 'https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16'
     }
   ];
 }
