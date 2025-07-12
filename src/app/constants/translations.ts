@@ -35,9 +35,9 @@ export const Translations: any = {
         'es-es': 'Proyectos'
     },
     umaCausaDescription: {
-        'pt-br': 'Permite que usuários descubram ONGs, realizem doações e colaborem com metas de instituições sociais em andamento.',
-        'en-us': 'Allows users to discover NGOs, make donations, and contribute to the goals of active social institutions.',
-        'es-es': 'Permite a los usuarios descubrir ONGs, hacer donaciones y colaborar con los objetivos de instituciones sociales activas.'
+        'pt-br': 'Plataforma web desenvolvida como Trabalho de Conclusão de Curso (TCC) do ensino técnico. Permite a descoberta de ONGs, realização de doações e acompanhamento de metas de instituições sociais em andamento, com foco na integração entre usuários e causas sociais.',
+        'en-us': 'A web platform developed as a Course Conclusion Paper (TCC) for technical education. It allows NGOs to be discovered, donations to be made and the goals of ongoing social institutions to be monitored, with a focus on integration between users and social causes.',
+        'es-es': 'Plataforma web desarrollada como proyecto de finalización de curso (TCC) en educación técnica. Permite descubrir ONG, hacer donaciones y seguir los objetivos de las instituciones sociales en curso, con un enfoque de integración entre usuarios y causas sociales.'
     },
     visit: {
         'pt-br': 'Visite',
@@ -50,9 +50,9 @@ export const Translations: any = {
         'es-es': 'Cartera'
     },
     portfolioDescription: {
-        'pt-br': 'Este site reúne minhas informações, habilidades e formas de contato. Aqui você encontra um pouco sobre mim, meus projetos e como podemos nos conectar.',
-        'en-us': 'This website brings together my information, skills, and contact details. Here, you can learn more about me, explore my work, and get in touch.',
-        'es-es': 'Este sitio reúne mi información, habilidades y formas de contacto. Aquí puedes conocer más sobre mí, explorar mis proyectos y ponerte en contacto.'
+        'pt-br': 'Este site foi criado para apresentar minhas informações profissionais, habilidades, projetos e formas de contato. Aqui você encontra um pouco da minha trajetória e como podemos nos conectar.',
+        'en-us': 'This website was created to present my professional information, skills, projects and ways of contacting me. Here you will find a little of my background and how we can connect.',
+        'es-es': 'Este sitio web fue creado para presentar mi información profesional, habilidades, proyectos y formas de contactar conmigo. Aquí encontrarás un poco de mi trayectoria y cómo podemos conectar.'
     },
     send: {
         'pt-br': 'Enviar',
@@ -88,5 +88,11 @@ export const Translations: any = {
         'pt-br': 'Todos os direitos reservados.',
         'en-us': 'All rights reserved.',
         'es-es': 'Reservados todos los derechos.'
+    },
+    entendendoSuaMenteDescription: {
+        'pt-br': 'Site profissional desenvolvido para uma psicóloga, com foco em apresentar seus serviços, especialidades, conteúdos informativos e facilitar o contato com pacientes. A plataforma oferece uma navegação clara e acolhedora, com um design pensado para transmitir confiança e bem-estar.',
+        'en-us': 'A professional website developed for a psychologist, focused on presenting her services, specialties, informative content and facilitating contact with patients. The platform offers clear and welcoming navigation, with a design designed to convey trust and well-being.',
+        'es-es': 'Sitio web profesional desarrollado para una psicóloga, centrado en presentar sus servicios, especialidades, contenidos informativos y facilitar el contacto con los pacientes. La plataforma ofrece una navegación clara y acogedora, con un diseño pensado para transmitir confianza y bienestar.'
+
     }
 }

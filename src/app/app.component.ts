@@ -133,6 +133,12 @@ export class AppComponent implements OnInit {
         gitHubLink: 'https://github.com/Gug4negrao/umaCausa',
       },
       {
+        name: 'Entendendo sua mente',
+        description: 'entendendoSuaMenteDescription',
+        staticLink: 'https://entendendosuamente.com.br',
+        gitHubLink: null,
+      },
+      {
         name: this.getTranslationText('portfolio'),
         description: 'portfolioDescription',
         staticLink: null,
