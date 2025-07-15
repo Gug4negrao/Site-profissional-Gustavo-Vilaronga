@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Variáveis */
 :root {
   --background-light: #f8f8f8;
