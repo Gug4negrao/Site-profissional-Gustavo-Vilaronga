@@ -14,6 +14,8 @@ interface Project {
   description: string;
   staticLink: string | null;
   gitHubLink: string | null;
+  image: string | null;
+  skills: string | null;
 }
 
 @Component({
@@ -131,18 +133,24 @@ export class AppComponent implements OnInit {
         description: 'umaCausaDescription',
         staticLink: 'https://uma-causa-estatico.vercel.app',
         gitHubLink: 'https://github.com/Gug4negrao/umaCausa',
+        image: null,
+        skills: null
       },
       {
         name: 'Entendendo sua mente',
         description: 'entendendoSuaMenteDescription',
         staticLink: 'https://entendendosuamente.com.br',
         gitHubLink: null,
+        image: null,
+        skills: null
       },
       {
         name: this.getTranslationText('portfolio'),
         description: 'portfolioDescription',
         staticLink: null,
-        gitHubLink: 'https://github.com/Gug4negrao/portifolioGustavo'
+        gitHubLink: 'https://github.com/Gug4negrao/portifolioGustavo',
+        image: null,
+        skills: null
       }
     ];
   }
