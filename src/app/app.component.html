@@ -1,7 +1,7 @@
   <div class="splash-screen" [hidden]="!showSplash">
     <img src="logo.ico.png" alt="Logo" class="logo-animation" />
   </div>
-  <header [hidden]="showSplash">
+  <header [hidden]="showSplash" class="bg-glass">
     <button class="menu-toggle" (click)="toggleMenu()"> &#9776; </button>
     <nav [ngClass]="{'active': menuOpen}">
       <a href="#basic-data" (click)="closeMenu()">{{getTranslationText('aboutMe')}}</a>
@@ -48,7 +48,7 @@
     </ul>
   </div>
   <div id="personal-informations">
-    <div id="background-art" class="primary-width">
+    <div class="primary-width d-flex flex-column align-items-center bg-glass">
       <div class="images">
         <div class="card">
           <img src="images/picture1.png" id="picture1" />
@@ -71,7 +71,7 @@
   <div id="skills-informations">
     <h2>{{getTranslationText('skills')}}</h2>
     <div class="skills_container primary-width">
-      <a class="skill" *ngFor="let skill of skills" [href]="skill.docLink" target="_blank">
+      <a class="bg-glass skill d-flex flex-column align-items-center text-decoration-none text-reset w-100 p-4 rounded-4 gap-2 fs-5" *ngFor="let skill of skills" [href]="skill.docLink" target="_blank">
       <span>{{ skill.name }}</span>
       <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" />
     </a>
@@ -94,7 +94,7 @@
     </div>
   </div>
   <div id="contact">
-   <div class="form-container">
+   <div class="form-container bg-glass">
      <h2>{{getTranslationText('contact')}}</h2>
      <form action="https://formsubmit.co/guieguganegrao@gmail.com" method="POST">
       <div class="input-group">
