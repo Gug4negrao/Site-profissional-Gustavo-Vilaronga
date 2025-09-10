@@ -9,13 +9,14 @@ interface Skill {
   docLink: string;
 }
 
-interface Project {
-  name: string;
+export interface Project {
+  title: string;
   description: string;
   staticLink: string | null;
   gitHubLink: string | null;
+  tech: string[];
+  image?: string | null;
 }
-
 @Component({
   selector: 'app-root',
   imports: [CommonModule],
@@ -127,22 +128,28 @@ export class AppComponent implements OnInit {
   getListProjects(): Project[] {
     return [
       {
-        name: 'UmaCausa',
+        title: 'UmaCausa',
         description: 'umaCausaDescription',
         staticLink: 'https://uma-causa-estatico.vercel.app',
         gitHubLink: 'https://github.com/Gug4negrao/umaCausa',
+        tech: ['angular', 'teste'],
+        image: null
       },
       {
-        name: 'Entendendo sua mente',
+        title: 'Entendendo sua mente',
         description: 'entendendoSuaMenteDescription',
         staticLink: 'https://entendendosuamente.com.br',
         gitHubLink: null,
+        tech: ['angular', 'teste'],
+        image: null
       },
       {
-        name: this.getTranslationText('portfolio'),
+        title: this.getTranslationText('portfolio'),
         description: 'portfolioDescription',
         staticLink: null,
-        gitHubLink: 'https://github.com/Gug4negrao/portifolioGustavo'
+        gitHubLink: 'https://github.com/Gug4negrao/portifolioGustavo',
+        tech: ['angular', 'teste'],
+        image: null
       }
     ];
   }
