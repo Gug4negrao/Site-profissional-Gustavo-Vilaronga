@@ -79,7 +79,7 @@
   </div>
   <div id="projects-informations">
     <h2>{{getTranslationText('projects')}}</h2>
-    <div class="w-100 d-flex gap-3 mt-2">
+    <div class="w-100 d-flex gap-3 mt-2 flex-column">
       <div class="project primary-width" *ngFor="let project of projects">
         <div class="project_title">{{project.title}}</div>
         <div class="project_subtitle">{{getTranslationText(project.description)}}</div>
