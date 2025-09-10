@@ -79,7 +79,7 @@
   </div>
   <div id="projects-informations">
     <h2>{{getTranslationText('projects')}}</h2>
-    <div class="projects_container">
+    <div class="w-100 d-flex gap-3 mt-2">
       <div class="project primary-width" *ngFor="let project of projects">
         <div class="project_title">{{project.name}}</div>
         <div class="project_subtitle">{{getTranslationText(project.description)}}</div>
@@ -92,6 +92,33 @@
         </div>
       </div>
     </div>
+    <div class="row g-4"> <!-- Continuar arrumando aqui -->
+    <article class="col-12 col-md-6 col-lg-4" *ngFor="let p of projects">
+      <div class="card h-100 shadow-sm text-light bg-glass">
+        <img *ngIf="p.image" [src]="p.image" class="card-img-top" [alt]="p.title">
+
+        <div class="card-body">
+          <h5 class="card-title mb-2">{{ p.title }}</h5>
+          <p class="card-text text-secondary small mb-3">{{ p.description }}</p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill text-bg-secondary" *ngFor="let t of p.tech">{{ t }}</span>
+          </div>
+        </div>
+
+        <div class="card-footer bg-transparent border-0 pt-0">
+          <div class="d-flex gap-2">
+            <a *ngIf="p.gitHubLink" [href]="p.gitHubLink" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">
+              <i class="bi bi-github me-1"></i>GitHub
+            </a>
+            <a *ngIf="p.staticLink" [href]="p.staticLink" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              Ver Projeto
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
   </div>
   <div id="contact">
    <div class="form-container bg-glass">
