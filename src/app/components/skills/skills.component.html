@@ -1,0 +1,28 @@
+<section id="skills" class="skills">
+  <div class="skills__container">
+    <header class="skills__header" [appReveal]="'up'">
+      <span class="section-number">02</span>
+      <h2 class="skills__title">{{ 'mySkills' | translate }}</h2>
+      <div class="skills__divider"></div>
+    </header>
+
+    <div class="skills__grid">
+      <a
+        *ngFor="let skill of skills; let i = index"
+        class="skill-card"
+        [href]="skill.docLink"
+        target="_blank"
+        rel="noopener"
+        [appReveal]="'up'"
+        [revealDelay]="i * 80"
+      >
+        <div class="skill-card__icon-wrap">
+          <img class="skill-card__icon" [src]="skill.icon" [alt]="skill.name + ' icon'" loading="lazy" />
+        </div>
+        <span class="skill-card__name">{{ skill.name }}</span>
+        <span class="skill-card__level" *ngIf="skill.level">{{ skill.level }}</span>
+        <div class="skill-card__shine"></div>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<header class="header" [class.header--scrolled]="scrolled()" [class.header--menu-open]="menuOpen()">
+  <a class="header__logo" href="#hero" (click)="closeMenu()" aria-label="Gustavo Vilaronga">
+    <span class="header__logo-g">G</span>
+    <span class="header__logo-v">V</span>
+  </a>
+
+  <button
+    class="header__toggle"
+    type="button"
+    [attr.aria-expanded]="menuOpen()"
+    aria-label="Menu"
+    (click)="toggleMenu()"
+  >
+    <span class="header__toggle-bar"></span>
+    <span class="header__toggle-bar"></span>
+    <span class="header__toggle-bar"></span>
+  </button>
+
+  <nav class="header__nav" [class.header__nav--open]="menuOpen()">
+    <a
+      *ngFor="let item of navItems"
+      class="header__nav-link"
+      [href]="item.href"
+      (click)="closeMenu()"
+    >
+      {{ item.labelKey | translate }}
+    </a>
+
+    <div class="header__nav-lang" role="group" aria-label="Language">
+      <button
+        *ngFor="let option of languageOptions"
+        type="button"
+        class="header__lang-btn"
+        [class.header__lang-btn--active]="isActiveLanguage(option.code)"
+        [attr.aria-label]="option.label"
+        (click)="selectLanguage(option.code)"
+      >
+        <img [src]="option.flag" [alt]="option.label" />
+      </button>
+    </div>
+  </nav>
+
+  <div class="header__lang header__lang--desktop" role="group" aria-label="Language selector">
+    <button
+      *ngFor="let option of languageOptions"
+      type="button"
+      class="header__lang-btn"
+      [class.header__lang-btn--active]="isActiveLanguage(option.code)"
+      [attr.aria-label]="option.label"
+      (click)="selectLanguage(option.code)"
+    >
+      <img [src]="option.flag" [alt]="option.label" />
+    </button>
+  </div>
+
+</header>

@@ -1,126 +1,14 @@
-  <header>
-    <button class="menu-toggle" (click)="toggleMenu()"> &#9776; </button>
-    <nav [ngClass]="{'active': menuOpen}">
-      <a href="#basic-data" (click)="closeMenu()">{{getTranslationText('aboutMe')}}</a>
-      <a href="#skills-informations" (click)="closeMenu()">{{getTranslationText('skills')}}</a>
-      <a href="#projects-informations" (click)="closeMenu()">{{getTranslationText('projects')}}</a>
-      <a href="#contact" (click)="closeMenu()">{{getTranslationText('contact')}}</a>
-    </nav>
-    <div class="language-container"> 
-      <button (click)="setLanguage('pt-br')" [ngClass]="{'language-set': language === 'pt-br'}">
-        <img src="images/brazil.png" alt="Brazil">
-      </button>
-      <button (click)="setLanguage('en-us')" [ngClass]="{'language-set': language === 'en-us'}">
-        <img src="images/eua.png" alt="EUA">
-      </button>
-      <button (click)="setLanguage('es-es')" [ngClass]="{'language-set': language === 'es-es'}">
-        <img src="images/spain.png" alt="Spain">
-      </button>
-    </div>
-  </header>
-<main id="main-container" (click)="isMobile() && menuOpen ? closeMenu() : null">
-  <div id="basic-data">
-    <h3>{{getTranslationText('developerFullStack')}}</h3>
-    <h1>Gustavo Vilaronga</h1>
-    <ul class="social-media"> 
-      <li style="--i:#65c436;--j:#1baf16" (click)="redirectSocialMedias('https://wa.me/5513991255771')">
-        <span><i class="fa-brands fa-whatsapp"></i></span>
-        <span class="title">Whatsapp</span>
-      </li>
-      <li style="--i:#2087c4;--j:#5ee3d4"
-        (click)="redirectSocialMedias('https://www.linkedin.com/in/gustavo-negr%C3%A3o')">
-        <span><i class="fa-brands fa-linkedin-in"></i></span>
-        <span class="title">Linkedin</span>
-      </li>
-      <li style="--i:#3878fa;--j:#281a77" (click)="redirectSocialMedias('https://github.com/Gug4negrao')">
-        <span><i class="fa-brands fa-github"></i></span>
-        <span class="title">GitHub</span>
-      </li>
-      <li style="--i:#e92a2a;--j:#490404"
-        (click)="redirectSocialMedias('mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!')">
-        <span><i class="fa-regular fa-envelope"></i></span>
-        <span class="title">Gmail</span>
-      </li>
-    </ul>
-  </div>
-  <div id="personal-informations">
-    <div id="background-art" class="primary-width">
-      <div class="images">
-        <div class="card">
-          <img src="images/picture1.png" id="picture1" />
-        </div>
-        <div class="card">
-          <img src="images/picture2.png" id="picture2" />
-        </div>
-        <div class="card">
-          <img src="images/picture3.png" id="picture3" />
-        </div>
-      </div>
-      <div class="text">
-        <h2>{{getTranslationText('aboutMe')}}</h2>
-        <hr>
-        <p>{{getTranslationText('textParagraph1')}}</p>
-        <p>{{getTranslationText('textParagraph2')}}</p>
-      </div>
-    </div>
-  </div>
-  <div id="skills-informations">
-    <h2>{{getTranslationText('skills')}}</h2>
-    <div class="skills_container primary-width">
-      <a class="skill" *ngFor="let skill of skills" [href]="skill.docLink" target="_blank">
-      <span>{{ skill.nome }}</span>
-      <img [src]="skill.icon" [alt]="skill.nome + ' icon'" class="skill-icon" />
-    </a>
-    </div>
-  </div>
-  <div id="projects-informations">
-    <h2>{{getTranslationText('projects')}}</h2>
-    <div class="projects_container">
-      <div class="project primary-width">
-        <div class="project_title">UmaCausa</div>
-        <div class="project_subtitle">{{getTranslationText('umaCausaDescription')}}</div>
-        <div class="project_actions">
-            <button class="project_action" (click)="redirectSocialMedias('https://github.com/Gug4negrao/umaCausa')"><i class="fa-brands fa-github"></i></button>
-            <button class="project_action project_action_solid" (click)="redirectSocialMedias('https://uma-causa-estatico.vercel.app')">{{getTranslationText('static')}}</button>
-        </div>
-      </div>
-      <div class="project primary-width">
-        <div class="project_title">UmaCausa</div>
-        <div class="project_subtitle">{{getTranslationText('umaCausaDescription')}}</div>
-        <div class="project_actions">
-            <button class="project_action" (click)="redirectSocialMedias('https://github.com/Gug4negrao/umaCausa')"><i class="fa-brands fa-github"></i></button>
-            <button class="project_action project_action_solid" (click)="redirectSocialMedias('https://uma-causa-estatico.vercel.app')">{{getTranslationText('static')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="contact">
-    <form class="contact-form" action="https://formsubmit.co/guieguganegrao@gmail.com" method="POST">
-      <h2>{{getTranslationText('contact')}}</h2>
-      <input type="text" name="Nome" placeholder="🧑‍💻 {{getTranslationText('yourName')}}" required>
-      <input type="email" name="Email" placeholder="✉️ {{getTranslationText('yourEmail')}}" required>
-      <input type="text" name="Mensagem" placeholder="📝 {{getTranslationText('yourMessage')}}" required>
-      <input type="hidden" name="_template" value="table">
-      <button type="submit">{{getTranslationText('send')}}</button>
-  </form>
-  </div>
-</main>
-  <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <img src="images/logoGustavoNegrao.png" alt="Logo Gustavo Negrão">
-        </div>
-        <ul class="footer-links">
-            <li><a href="#basic-data">{{getTranslationText('aboutMe')}}</a></li>
-            <li><a href="#skills-informations">{{getTranslationText('skills')}}</a></li>
-            <li><a href="#projects-informations">{{getTranslationText('projects')}}</a></li>
-            <li><a href="#contact">{{getTranslationText('contact')}}</a></li>
-        </ul>
-        <div class="footer-social">
-            <a href="https://wa.me/5513991255771" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/gustavo-negr%C3%A3o" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Gug4negrao" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </div>
-    <div class="footer-bottom">&copy; 2025 Gustavo Negrão. {{getTranslationText('allRightsReserved')}}</div>
-</footer>
+<div class="app">
+  <app-header></app-header>
+
+  <main class="app__main">
+    <app-hero></app-hero>
+    <app-about></app-about>
+    <app-skills></app-skills>
+    <app-projects></app-projects>
+    <app-contact></app-contact>
+  </main>
+
+  <app-footer></app-footer>
+  <app-back-to-top></app-back-to-top>
+</div>

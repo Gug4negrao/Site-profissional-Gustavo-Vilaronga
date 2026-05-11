@@ -1,0 +1,44 @@
+<section id="hero" class="hero">
+  <div class="hero__aurora hero__aurora--one"></div>
+  <div class="hero__aurora hero__aurora--two"></div>
+  <div class="hero__aurora hero__aurora--three"></div>
+  <div class="hero__grid"></div>
+
+  <div class="hero__content">
+    <span class="hero__greeting" [appReveal]="'fade'">
+      <span class="hero__greeting-line"></span>
+      <span>{{ 'heroGreeting' | translate }}</span>
+    </span>
+
+    <h1 class="hero__name" [appReveal]="'up'" [revealDelay]="120">
+      Gustavo Vilaronga
+    </h1>
+
+    <p class="hero__role" [appReveal]="'up'" [revealDelay]="240">
+      {{ 'developerFullStack' | translate }}
+      <span class="hero__role-divider">·</span>
+      Santos, SP
+    </p>
+
+    <ul class="hero__socials" [appReveal]="'up'" [revealDelay]="360">
+      <li
+        *ngFor="let social of socials; let i = index"
+        class="hero__social"
+        [style.--from]="social.colorFrom"
+        [style.--to]="social.colorTo"
+        [style.--delay]="i * 80 + 'ms'"
+        (click)="open(social.url)"
+        (keyup.enter)="open(social.url)"
+        tabindex="0"
+        [attr.aria-label]="social.label"
+      >
+        <i [class]="social.icon"></i>
+        <span class="hero__social-label">{{ social.label }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll down">
+    <span class="hero__scroll-arrow"></span>
+  </a>
+</section>

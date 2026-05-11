@@ -1,0 +1,9 @@
+<button
+  type="button"
+  class="back-to-top"
+  [class.back-to-top--visible]="visible()"
+  (click)="scrollTop()"
+  [attr.aria-label]="'backToTop' | translate"
+>
+  <i class="fa-solid fa-arrow-up"></i>
+</button>

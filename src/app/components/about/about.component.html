@@ -1,0 +1,30 @@
+<section id="about" class="about">
+  <div class="about__container">
+    <header class="about__header" [appReveal]="'up'">
+      <span class="section-number">01</span>
+      <h2 class="about__title">{{ 'aboutMe' | translate }}</h2>
+      <div class="about__divider"></div>
+    </header>
+
+    <div class="about__content">
+      <div class="about__gallery" [appReveal]="'left'">
+        <div
+          *ngFor="let picture of pictures; let i = index"
+          class="about__card"
+          [class.about__card--tablet]="picture.visibility === 'tablet'"
+          [class.about__card--desktop]="picture.visibility === 'desktop'"
+          [style.--card-index]="i"
+        >
+          <img [src]="picture.src" alt="Gustavo Negrão" loading="lazy" />
+          <div class="about__card-glow"></div>
+        </div>
+      </div>
+
+      <div class="about__text" [appReveal]="'right'" [revealDelay]="200">
+        <p>{{ 'textParagraph1' | translate }}</p>
+        <p>{{ 'textParagraph2' | translate }}</p>
+        <p>{{ 'textParagraph3' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>

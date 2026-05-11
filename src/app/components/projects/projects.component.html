@@ -1,0 +1,74 @@
+<section id="projects" class="projects">
+  <div class="projects__container">
+    <header class="projects__header" [appReveal]="'up'">
+      <span class="section-number">03</span>
+      <h2 class="projects__title">{{ 'myProjects' | translate }}</h2>
+      <div class="projects__divider"></div>
+    </header>
+
+    <div class="projects__grid">
+      <article
+        *ngFor="let project of projects; let i = index"
+        class="project-card"
+        [style.--accent]="project.accent"
+        [appReveal]="i % 2 === 0 ? 'left' : 'right'"
+        [revealDelay]="i * 120"
+      >
+        <div class="project-card__preview" *ngIf="project.preview as preview">
+          <div *ngIf="preview.kind === 'iframe'" class="project-card__frame-wrap">
+            <iframe
+              class="project-card__frame"
+              [src]="trustUrl(preview.src)"
+              loading="lazy"
+              title="{{ project.title }} preview"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+            <button
+              type="button"
+              class="project-card__frame-cta"
+              (click)="open(preview.src)"
+              [attr.aria-label]="'visitProject' | translate"
+            >
+              <i class="fa-solid fa-up-right-from-square"></i>
+              <span>{{ 'visitProject' | translate }}</span>
+            </button>
+          </div>
+          <img
+            *ngIf="preview.kind === 'image'"
+            class="project-card__image"
+            [src]="preview.src"
+            [alt]="project.title"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="project-card__body">
+          <div class="project-card__top">
+            <span class="project-card__index">0{{ i + 1 }}</span>
+            <div class="project-card__tags">
+              <span *ngFor="let tag of project.tags" class="project-card__tag">{{ tag }}</span>
+            </div>
+          </div>
+
+          <h3 class="project-card__title">{{ project.title }}</h3>
+          <p class="project-card__description">{{ project.descriptionKey | translate }}</p>
+
+          <div class="project-card__actions">
+            <button
+              *ngFor="let link of project.links"
+              type="button"
+              class="project-card__btn"
+              [class.project-card__btn--primary]="link.primary"
+              (click)="open(link.url)"
+            >
+              <i *ngIf="link.icon" [class]="link.icon"></i>
+              <span>{{ link.icon ? link.label : (link.label | translate) }}</span>
+              <span class="project-card__arrow" *ngIf="link.primary">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

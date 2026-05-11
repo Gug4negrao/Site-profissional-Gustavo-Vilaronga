@@ -1,0 +1,99 @@
+<section id="contact" class="contact">
+  <div class="contact__container">
+    <div class="contact__info" [appReveal]="'left'">
+      <span class="section-number">04</span>
+      <h2 class="contact__title">{{ 'getInTouch' | translate }}</h2>
+      <div class="contact__divider"></div>
+
+      <ul class="contact__list">
+        <li class="contact__item">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="mailto:guieguganegrao@gmail.com">guieguganegrao&#64;gmail.com</a>
+        </li>
+        <li class="contact__item">
+          <i class="fa-brands fa-whatsapp"></i>
+          <a href="https://wa.me/5513991255771" target="_blank" rel="noopener">+55 13 99125-5771</a>
+        </li>
+        <li class="contact__item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Santos, SP — Brasil</span>
+        </li>
+      </ul>
+    </div>
+
+    <form
+      class="contact__form"
+      [formGroup]="form"
+      [appReveal]="'right'"
+      [revealDelay]="120"
+      (ngSubmit)="onSubmit()"
+      novalidate
+    >
+      <div class="contact__form-inner" [class.contact__form-inner--hidden]="state() === 'success'">
+        <div class="contact__row">
+          <div class="contact__field" [class.contact__field--invalid]="hasError('name')">
+            <input id="contact-name" type="text" formControlName="name" autocomplete="name" placeholder=" " />
+            <label for="contact-name">{{ 'yourName' | translate }}</label>
+            <span class="contact__error" *ngIf="hasError('name')">
+              {{ firstErrorKey('name')! | translate }}
+            </span>
+          </div>
+
+          <div class="contact__field" [class.contact__field--invalid]="hasError('email')">
+            <input id="contact-email" type="email" formControlName="email" autocomplete="email" placeholder=" " />
+            <label for="contact-email">{{ 'yourEmail' | translate }}</label>
+            <span class="contact__error" *ngIf="hasError('email')">
+              {{ firstErrorKey('email')! | translate }}
+            </span>
+          </div>
+        </div>
+
+        <div class="contact__field" [class.contact__field--invalid]="hasError('subject')">
+          <input id="contact-subject" type="text" formControlName="subject" placeholder=" " />
+          <label for="contact-subject">{{ 'yourSubject' | translate }}</label>
+          <span class="contact__error" *ngIf="hasError('subject')">
+            {{ firstErrorKey('subject')! | translate }}
+          </span>
+        </div>
+
+        <div class="contact__field" [class.contact__field--invalid]="hasError('message')">
+          <textarea id="contact-message" rows="4" formControlName="message" placeholder=" "></textarea>
+          <label for="contact-message">{{ 'yourMessage' | translate }}</label>
+          <span class="contact__error" *ngIf="hasError('message')">
+            {{ firstErrorKey('message')! | translate }}
+          </span>
+        </div>
+
+        <input type="text" class="contact__honey" formControlName="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <button
+          type="submit"
+          class="contact__submit"
+          [disabled]="state() === 'submitting'"
+        >
+          <span *ngIf="state() !== 'submitting'">{{ 'send' | translate }}</span>
+          <span *ngIf="state() === 'submitting'">{{ 'sending' | translate }}</span>
+          <i *ngIf="state() !== 'submitting'" class="fa-solid fa-paper-plane"></i>
+          <i *ngIf="state() === 'submitting'" class="fa-solid fa-spinner contact__spinner"></i>
+        </button>
+
+        <p class="contact__feedback contact__feedback--error" *ngIf="state() === 'error'">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          {{ 'sendError' | translate }}
+        </p>
+      </div>
+
+      <div class="contact__success" *ngIf="state() === 'success'">
+        <div class="contact__success-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 class="contact__success-title">{{ 'messageSent' | translate }}</h3>
+        <p class="contact__success-text">{{ 'messageSentDescription' | translate }}</p>
+        <button type="button" class="contact__success-action" (click)="resetForm()">
+          <i class="fa-solid fa-rotate-left"></i>
+          {{ 'newMessage' | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

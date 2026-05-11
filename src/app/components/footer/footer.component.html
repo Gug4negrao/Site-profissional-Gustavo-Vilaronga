@@ -1,0 +1,28 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__brand">
+      <img src="images/logoGustavoNegrao.png" alt="Logo Gustavo Negrão" loading="lazy" />
+      <p>Full-Stack Developer · Santos, SP</p>
+    </div>
+
+    <nav class="footer__links" aria-label="Footer navigation">
+      <a *ngFor="let item of navItems" [href]="item.href">{{ item.key | translate }}</a>
+    </nav>
+
+    <div class="footer__social">
+      <a
+        *ngFor="let social of socials"
+        [href]="social.url"
+        target="_blank"
+        rel="noopener"
+        [attr.aria-label]="social.label"
+      >
+        <i [class]="social.icon"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    &copy; {{ year }} Gustavo Negrão. {{ 'allRightsReserved' | translate }}
+  </div>
+</footer>
