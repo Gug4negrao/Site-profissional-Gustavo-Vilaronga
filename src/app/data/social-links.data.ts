@@ -2,13 +2,6 @@ import { SocialLink } from '../models/social-link.model';
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    label: 'WhatsApp',
-    icon: 'fa-brands fa-whatsapp',
-    url: 'https://wa.me/5513991255771',
-    colorFrom: '#65c436',
-    colorTo: '#1baf16'
-  },
-  {
     label: 'LinkedIn',
     icon: 'fa-brands fa-linkedin-in',
     url: 'https://www.linkedin.com/in/gustavo-negr%C3%A3o',

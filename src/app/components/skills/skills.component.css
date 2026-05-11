@@ -114,18 +114,6 @@
   letter-spacing: 0.5px;
 }
 
-.skill-card__level {
-  font-family: var(--font-body);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: rgba(96, 165, 250, 0.12);
-  color: #93c5fd;
-  border: 1px solid rgba(96, 165, 250, 0.2);
-}
-
 .skill-card__shine {
   position: absolute;
   top: -50%;

@@ -10,8 +10,8 @@ export type TranslationKey =
   | 'textParagraph3'
   | 'projects'
   | 'umaCausaDescription'
-  | 'portfolioDescription'
   | 'entendendoSuaMenteDescription'
+  | 'atelierRosaDescription'
   | 'static'
   | 'portfolio'
   | 'send'
@@ -45,7 +45,10 @@ export type TranslationKey =
   | 'messageSent'
   | 'messageSentDescription'
   | 'sendError'
-  | 'newMessage';
+  | 'newMessage'
+  | 'events'
+  | 'myEvents'
+  | 'viewOnInstagram';
 
 export const Translations: Record<TranslationKey, Record<Language, string>> = {
   links: {
@@ -133,15 +136,15 @@ export const Translations: Record<TranslationKey, Record<Language, string>> = {
     'en-us': 'A web platform developed as a Course Conclusion Paper (TCC) for technical education. It allows NGOs to be discovered, donations to be made and the goals of ongoing social institutions to be monitored, with a focus on integration between users and social causes.',
     'es-es': 'Plataforma web desarrollada como proyecto de finalización de curso (TCC) en educación técnica. Permite descubrir ONG, hacer donaciones y seguir los objetivos de las instituciones sociales en curso, con un enfoque de integración entre usuarios y causas sociales.'
   },
-  portfolioDescription: {
-    'pt-br': 'Este site foi criado para apresentar minhas informações profissionais, habilidades, projetos e formas de contato. Aqui você encontra um pouco da minha trajetória e como podemos nos conectar.',
-    'en-us': 'This website was created to present my professional information, skills, projects and ways of contacting me. Here you will find a little of my background and how we can connect.',
-    'es-es': 'Este sitio web fue creado para presentar mi información profesional, habilidades, proyectos y formas de contactar conmigo. Aquí encontrarás un poco de mi trayectoria y cómo podemos conectar.'
-  },
   entendendoSuaMenteDescription: {
     'pt-br': 'Site profissional desenvolvido para uma psicóloga, com foco em apresentar seus serviços, especialidades, conteúdos informativos e facilitar o contato com pacientes. A plataforma oferece uma navegação clara e acolhedora, com design pensado para transmitir confiança e bem-estar.',
     'en-us': 'A professional website developed for a psychologist, focused on presenting her services, specialties, informative content and facilitating contact with patients. The platform offers clear and welcoming navigation, with a design designed to convey trust and well-being.',
     'es-es': 'Sitio web profesional desarrollado para una psicóloga, centrado en presentar sus servicios, especialidades, contenidos informativos y facilitar el contacto con los pacientes. La plataforma ofrece una navegación clara y acogedora, con un diseño pensado para transmitir confianza y bienestar.'
+  },
+  atelierRosaDescription: {
+    'pt-br': 'Vitrine digital criada para um ateliê autoral, destacando seus produtos, detalhes de fabricação e diferenciais da marca. O site foi pensado para aproximar o público da essência artesanal do negócio, com uma experiência visual elegante, intuitiva e direcionada à venda das peças.',
+    'en-us': 'A digital showcase created for an authorial atelier, highlighting its products, manufacturing details and brand differentiators. The website was designed to bring the audience closer to the artisanal essence of the business, with an elegant, intuitive visual experience focused on selling the pieces.',
+    'es-es': 'Vitrina digital creada para un atelier autoral, destacando sus productos, detalles de fabricación y diferenciales de la marca. El sitio fue pensado para acercar al público a la esencia artesanal del negocio, con una experiencia visual elegante, intuitiva y orientada a la venta de las piezas.'
   },
   static: {
     'pt-br': 'Acessar',
@@ -272,5 +275,20 @@ export const Translations: Record<TranslationKey, Record<Language, string>> = {
     'pt-br': 'Enviar outra',
     'en-us': 'Send another',
     'es-es': 'Enviar otro'
+  },
+  events: {
+    'pt-br': 'Eventos',
+    'en-us': 'Events',
+    'es-es': 'Eventos'
+  },
+  myEvents: {
+    'pt-br': 'Eventos & Comunidade',
+    'en-us': 'Events & Community',
+    'es-es': 'Eventos y Comunidad'
+  },
+  viewOnInstagram: {
+    'pt-br': 'Ver no Instagram',
+    'en-us': 'View on Instagram',
+    'es-es': 'Ver en Instagram'
   }
 };

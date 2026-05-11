@@ -7,7 +7,7 @@ import { Language } from '../../models/language.model';
 
 interface NavItem {
   href: string;
-  labelKey: 'home' | 'aboutMe' | 'skills' | 'projects' | 'contact';
+  labelKey: 'home' | 'aboutMe' | 'skills' | 'events' | 'projects' | 'contact';
 }
 
 @Component({
@@ -24,6 +24,7 @@ export class HeaderComponent {
     { href: '#hero', labelKey: 'home' },
     { href: '#about', labelKey: 'aboutMe' },
     { href: '#skills', labelKey: 'skills' },
+    { href: '#events', labelKey: 'events' },
     { href: '#projects', labelKey: 'projects' },
     { href: '#contact', labelKey: 'contact' }
   ];

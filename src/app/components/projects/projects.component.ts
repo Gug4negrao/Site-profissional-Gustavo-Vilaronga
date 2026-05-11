@@ -24,4 +24,10 @@ export class ProjectsComponent {
   open(url: string): void {
     window.open(url, '_blank', 'noopener,noreferrer');
   }
+
+  onImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.style.display = 'none';
+    img.parentElement?.classList.add('project-card__image-wrap--fallback');
+  }
 }
