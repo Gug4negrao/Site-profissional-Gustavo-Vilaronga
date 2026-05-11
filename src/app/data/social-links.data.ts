@@ -28,6 +28,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
     url: 'mailto:guieguganegrao@gmail.com?subject=Contato&body=Olá, Gustavo! Gostaria de saber mais!',
     colorFrom: '#e92a2a',
     colorTo: '#490404'
+  },
+  {
+    label: 'Instagram',
+    icon: 'fa-brands fa-instagram',
+    url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDU3OTIzNjQyMjc2MDY2?story_media_id=3620401359884044203_8015582216&igsh=OHc5aTV0c3F0anR0',
+    colorFrom: '#a94ce7',
+    colorTo: '#e1306c'
   }
 ];
 

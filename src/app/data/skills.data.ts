@@ -38,6 +38,24 @@ export const SKILLS: Skill[] = [
     level: 'intermediate'
   },
   {
+    name: 'ASP.NET',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg',
+    docLink: 'https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-7.0',
+    level: 'intermediate'
+  },
+  {
+    name: 'MySQL',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    docLink: 'https://dev.mysql.com/doc/',
+    level: 'intermediate'
+  },
+  {
+    name: 'SQL Server',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg',
+    docLink: 'https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16',
+    level: 'intermediate'
+  },
+  {
     name: 'Bootstrap',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
     docLink: 'https://getbootstrap.com/docs/',

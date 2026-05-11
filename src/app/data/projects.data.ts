@@ -24,6 +24,23 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
+    title: 'Entendendo sua Mente',
+    descriptionKey: 'entendendoSuaMenteDescription',
+    tags: ['Angular', 'TypeScript', 'CSS'],
+    accent: 'linear-gradient(135deg, #14b8a6, #0ea5e9)',
+    preview: {
+      kind: 'iframe',
+      src: 'https://entendendosuamente.com.br'
+    },
+    links: [
+      {
+        label: 'visitProject',
+        url: 'https://entendendosuamente.com.br',
+        primary: true
+      }
+    ]
+  },
+  {
     title: 'Portfólio',
     descriptionKey: 'portfolioDescription',
     tags: ['Angular', 'TypeScript', 'CSS'],
