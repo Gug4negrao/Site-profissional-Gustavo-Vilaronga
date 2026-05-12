@@ -32,7 +32,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const LANGUAGE_OPTIONS = [
-  { code: 'pt-br' as const, label: 'Português', flag: 'images/brazil.png' },
-  { code: 'en-us' as const, label: 'English', flag: 'images/eua.png' },
-  { code: 'es-es' as const, label: 'Español', flag: 'images/spain.png' }
+  { code: 'pt-br' as const, label: 'Português', flag: 'images/brazil.webp' },
+  { code: 'en-us' as const, label: 'English', flag: 'images/eua.webp' },
+  { code: 'es-es' as const, label: 'Español', flag: 'images/spain.webp' }
 ];

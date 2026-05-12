@@ -26,6 +26,9 @@
             [src]="event.logoUrl"
             [alt]="event.name + ' logo'"
             loading="lazy"
+            decoding="async"
+            width="80"
+            height="80"
           />
           <ng-template #iconTpl>
             <i [class]="event.icon || 'fa-solid fa-calendar-days'"></i>

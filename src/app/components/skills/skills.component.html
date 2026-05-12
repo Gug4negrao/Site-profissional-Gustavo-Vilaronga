@@ -17,7 +17,7 @@
         [revealDelay]="i * 80"
       >
         <div class="skill-card__icon-wrap">
-          <img class="skill-card__icon" [src]="skill.icon" [alt]="skill.name + ' icon'" loading="lazy" />
+          <img class="skill-card__icon" [src]="skill.icon" [alt]="skill.name + ' icon'" loading="lazy" decoding="async" width="48" height="48" />
         </div>
         <span class="skill-card__name">{{ skill.name }}</span>
         <div class="skill-card__shine"></div>

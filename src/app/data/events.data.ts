@@ -10,7 +10,7 @@ export const EVENTS: Event[] = [
     location: 'Rio de Janeiro, RJ',
     url: INSTAGRAM_HIGHLIGHT,
     accent: 'linear-gradient(135deg, #16a34a, #facc15)',
-    logoUrl: 'images/wb_rio.png'
+    logoUrl: 'images/wb_rio.webp'
   },
   {
     name: 'AWS Summit',

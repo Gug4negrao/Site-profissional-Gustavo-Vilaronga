@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     accent: 'linear-gradient(135deg, #f43f5e, #f59e0b)',
     preview: {
       kind: 'image',
-      src: 'images/projects/atelier-rosa-de-sicar.jpg',
+      src: 'images/projects/atelier-rosa-de-sicar.webp',
       alt: 'Atelier Rosa de Sicar'
     },
     links: [
@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
     accent: 'linear-gradient(135deg, #14b8a6, #0ea5e9)',
     preview: {
       kind: 'image',
-      src: 'images/projects/entendendo-sua-mente.jpg',
+      src: 'images/projects/entendendo-sua-mente.webp',
       alt: 'Entendendo sua Mente - site profissional'
     },
     links: [
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     accent: 'linear-gradient(135deg, #06b6d4, #3b82f6)',
     preview: {
       kind: 'image',
-      src: 'images/projects/umacausa.jpg',
+      src: 'images/projects/umacausa.webp',
       alt: 'UmaCausa - plataforma de doações'
     },
     links: [

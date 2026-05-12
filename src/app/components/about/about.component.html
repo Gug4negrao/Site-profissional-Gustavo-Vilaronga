@@ -15,7 +15,15 @@
           [class.about__card--desktop]="picture.visibility === 'desktop'"
           [style.--card-index]="i"
         >
-          <img [src]="picture.src" alt="Gustavo Negrão" loading="lazy" />
+          <img
+            [src]="picture.src"
+            alt="Gustavo Negrão"
+            width="220"
+            height="293"
+            [attr.loading]="i === 0 ? null : 'lazy'"
+            [attr.fetchpriority]="i === 0 ? 'high' : null"
+            decoding="async"
+          />
           <div class="about__card-glow"></div>
         </div>
       </div>

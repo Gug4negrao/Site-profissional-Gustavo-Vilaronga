@@ -12,8 +12,8 @@ import { RevealOnScrollDirective } from '../../directives/reveal-on-scroll.direc
 })
 export class AboutComponent {
   readonly pictures = [
-    { src: 'images/picture1.png', visibility: 'always' as const },
-    { src: 'images/picture2.png', visibility: 'tablet' as const },
-    { src: 'images/picture3.png', visibility: 'desktop' as const }
+    { src: 'images/picture1.webp', visibility: 'always' as const },
+    { src: 'images/picture2.webp', visibility: 'tablet' as const },
+    { src: 'images/picture3.webp', visibility: 'desktop' as const }
   ];
 }

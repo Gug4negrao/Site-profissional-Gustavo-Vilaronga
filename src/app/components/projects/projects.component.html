@@ -40,6 +40,9 @@
               [src]="preview.src"
               [alt]="preview.alt || project.title"
               loading="lazy"
+              decoding="async"
+              width="640"
+              height="360"
               (error)="onImageError($event)"
             />
             <span class="project-card__image-fallback">{{ project.title }}</span>
