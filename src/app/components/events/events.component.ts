@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { RevealOnScrollDirective } from '../../directives/reveal-on-scroll.directive';
-import { EVENTS } from '../../data/events.data';
+import { EVENTS, EVENTS_HIGHLIGHT_URL } from '../../data/events.data';
 
 @Component({
   selector: 'app-events',
@@ -13,8 +13,5 @@ import { EVENTS } from '../../data/events.data';
 })
 export class EventsComponent {
   readonly events = EVENTS;
-
-  open(url: string): void {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  }
+  readonly highlightUrl = EVENTS_HIGHLIGHT_URL;
 }

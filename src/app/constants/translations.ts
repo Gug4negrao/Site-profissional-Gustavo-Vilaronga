@@ -48,7 +48,7 @@ export type TranslationKey =
   | 'newMessage'
   | 'events'
   | 'myEvents'
-  | 'viewOnInstagram';
+  | 'viewEventsOnInstagram';
 
 export const Translations: Record<TranslationKey, Record<Language, string>> = {
   links: {
@@ -286,9 +286,9 @@ export const Translations: Record<TranslationKey, Record<Language, string>> = {
     'en-us': 'Events & Community',
     'es-es': 'Eventos y Comunidad'
   },
-  viewOnInstagram: {
-    'pt-br': 'Ver no Instagram',
-    'en-us': 'View on Instagram',
-    'es-es': 'Ver en Instagram'
+  viewEventsOnInstagram: {
+    'pt-br': 'Ver os destaques no Instagram',
+    'en-us': 'See the highlights on Instagram',
+    'es-es': 'Ver los destacados en Instagram'
   }
 };
